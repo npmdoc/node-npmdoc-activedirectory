@@ -1,0 +1,3356 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/gheeres/node-activedirectory#readme">activedirectory (v0.7.2)</a>
+</h1>
+<h4>ActiveDirectory is an ldapjs client for authN (authentication) and authZ (authorization) for Microsoft Active Directory with range retrieval support for large Active Directory installations.</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.activedirectory">module activedirectory</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.filters.AndFilter">
+            function <span class="apidocSignatureSpan">activedirectory.</span>filters.AndFilter
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.filters.ApproximateFilter">
+            function <span class="apidocSignatureSpan">activedirectory.</span>filters.ApproximateFilter
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.filters.EqualityFilter">
+            function <span class="apidocSignatureSpan">activedirectory.</span>filters.EqualityFilter
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.filters.ExtensibleFilter">
+            function <span class="apidocSignatureSpan">activedirectory.</span>filters.ExtensibleFilter
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.filters.GreaterThanEqualsFilter">
+            function <span class="apidocSignatureSpan">activedirectory.</span>filters.GreaterThanEqualsFilter
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.filters.LessThanEqualsFilter">
+            function <span class="apidocSignatureSpan">activedirectory.</span>filters.LessThanEqualsFilter
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.filters.NotFilter">
+            function <span class="apidocSignatureSpan">activedirectory.</span>filters.NotFilter
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.filters.OrFilter">
+            function <span class="apidocSignatureSpan">activedirectory.</span>filters.OrFilter
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.filters.PresenceFilter">
+            function <span class="apidocSignatureSpan">activedirectory.</span>filters.PresenceFilter
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.filters.SubstringFilter">
+            function <span class="apidocSignatureSpan">activedirectory.</span>filters.SubstringFilter
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.super_">
+            function <span class="apidocSignatureSpan">activedirectory.</span>super_
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">activedirectory.</span>filters</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">activedirectory.</span>filters.AndFilter.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">activedirectory.</span>filters.AndFilter.super_.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">activedirectory.</span>filters.ApproximateFilter.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">activedirectory.</span>filters.ApproximateFilter.super_.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">activedirectory.</span>filters.EqualityFilter.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">activedirectory.</span>filters.EqualityFilter.super_.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">activedirectory.</span>filters.ExtensibleFilter.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">activedirectory.</span>filters.ExtensibleFilter.super_.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">activedirectory.</span>filters.GreaterThanEqualsFilter.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">activedirectory.</span>filters.GreaterThanEqualsFilter.super_.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">activedirectory.</span>filters.LessThanEqualsFilter.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">activedirectory.</span>filters.LessThanEqualsFilter.super_.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">activedirectory.</span>filters.NotFilter.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">activedirectory.</span>filters.NotFilter.super_.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">activedirectory.</span>filters.OrFilter.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">activedirectory.</span>filters.OrFilter.super_.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">activedirectory.</span>filters.PresenceFilter.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">activedirectory.</span>filters.PresenceFilter.super_.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">activedirectory.</span>filters.SubstringFilter.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">activedirectory.</span>filters.SubstringFilter.super_.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.activedirectory.filters">module activedirectory.filters</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.filters.AndFilter">
+            function <span class="apidocSignatureSpan">activedirectory.filters.</span>AndFilter
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.filters.ApproximateFilter">
+            function <span class="apidocSignatureSpan">activedirectory.filters.</span>ApproximateFilter
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.filters.EqualityFilter">
+            function <span class="apidocSignatureSpan">activedirectory.filters.</span>EqualityFilter
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.filters.ExtensibleFilter">
+            function <span class="apidocSignatureSpan">activedirectory.filters.</span>ExtensibleFilter
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.filters.GreaterThanEqualsFilter">
+            function <span class="apidocSignatureSpan">activedirectory.filters.</span>GreaterThanEqualsFilter
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.filters.LessThanEqualsFilter">
+            function <span class="apidocSignatureSpan">activedirectory.filters.</span>LessThanEqualsFilter
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.filters.NotFilter">
+            function <span class="apidocSignatureSpan">activedirectory.filters.</span>NotFilter
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.filters.OrFilter">
+            function <span class="apidocSignatureSpan">activedirectory.filters.</span>OrFilter
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.filters.PresenceFilter">
+            function <span class="apidocSignatureSpan">activedirectory.filters.</span>PresenceFilter
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.filters.SubstringFilter">
+            function <span class="apidocSignatureSpan">activedirectory.filters.</span>SubstringFilter
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.filters.isFilter">
+            function <span class="apidocSignatureSpan">activedirectory.filters.</span>isFilter
+            <span class="apidocSignatureSpan">(filter)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.filters.parse">
+            function <span class="apidocSignatureSpan">activedirectory.filters.</span>parse
+            <span class="apidocSignatureSpan">(ber)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.filters.parseString">
+            function <span class="apidocSignatureSpan">activedirectory.filters.</span>parseString
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.activedirectory.filters.AndFilter">module activedirectory.filters.AndFilter</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.filters.AndFilter.AndFilter">
+            function <span class="apidocSignatureSpan">activedirectory.filters.</span>AndFilter
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.filters.AndFilter.super_">
+            function <span class="apidocSignatureSpan">activedirectory.filters.AndFilter.</span>super_
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.activedirectory.filters.AndFilter.prototype">module activedirectory.filters.AndFilter.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.filters.AndFilter.prototype._toBer">
+            function <span class="apidocSignatureSpan">activedirectory.filters.AndFilter.prototype.</span>_toBer
+            <span class="apidocSignatureSpan">(ber)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.filters.AndFilter.prototype.toBer">
+            function <span class="apidocSignatureSpan">activedirectory.filters.AndFilter.prototype.</span>toBer
+            <span class="apidocSignatureSpan">(ber)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.activedirectory.filters.AndFilter.super_.prototype">module activedirectory.filters.AndFilter.super_.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.filters.AndFilter.super_.prototype.addFilter">
+            function <span class="apidocSignatureSpan">activedirectory.filters.AndFilter.super_.prototype.</span>addFilter
+            <span class="apidocSignatureSpan">(filter)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.filters.AndFilter.super_.prototype.matches">
+            function <span class="apidocSignatureSpan">activedirectory.filters.AndFilter.super_.prototype.</span>matches
+            <span class="apidocSignatureSpan">(target, strictAttrCase)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.filters.AndFilter.super_.prototype.toString">
+            function <span class="apidocSignatureSpan">activedirectory.filters.AndFilter.super_.prototype.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.activedirectory.filters.ApproximateFilter">module activedirectory.filters.ApproximateFilter</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.filters.ApproximateFilter.ApproximateFilter">
+            function <span class="apidocSignatureSpan">activedirectory.filters.</span>ApproximateFilter
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.filters.ApproximateFilter.super_">
+            function <span class="apidocSignatureSpan">activedirectory.filters.ApproximateFilter.</span>super_
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.activedirectory.filters.ApproximateFilter.prototype">module activedirectory.filters.ApproximateFilter.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.filters.ApproximateFilter.prototype._toBer">
+            function <span class="apidocSignatureSpan">activedirectory.filters.ApproximateFilter.prototype.</span>_toBer
+            <span class="apidocSignatureSpan">(ber)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.filters.ApproximateFilter.prototype.parse">
+            function <span class="apidocSignatureSpan">activedirectory.filters.ApproximateFilter.prototype.</span>parse
+            <span class="apidocSignatureSpan">(ber)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.filters.ApproximateFilter.prototype.toBer">
+            function <span class="apidocSignatureSpan">activedirectory.filters.ApproximateFilter.prototype.</span>toBer
+            <span class="apidocSignatureSpan">(ber)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.activedirectory.filters.ApproximateFilter.super_.prototype">module activedirectory.filters.ApproximateFilter.super_.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.filters.ApproximateFilter.super_.prototype.matches">
+            function <span class="apidocSignatureSpan">activedirectory.filters.ApproximateFilter.super_.prototype.</span>matches
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.filters.ApproximateFilter.super_.prototype.toString">
+            function <span class="apidocSignatureSpan">activedirectory.filters.ApproximateFilter.super_.prototype.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.activedirectory.filters.EqualityFilter">module activedirectory.filters.EqualityFilter</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.filters.EqualityFilter.EqualityFilter">
+            function <span class="apidocSignatureSpan">activedirectory.filters.</span>EqualityFilter
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.filters.EqualityFilter.super_">
+            function <span class="apidocSignatureSpan">activedirectory.filters.EqualityFilter.</span>super_
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.activedirectory.filters.EqualityFilter.prototype">module activedirectory.filters.EqualityFilter.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.filters.EqualityFilter.prototype._toBer">
+            function <span class="apidocSignatureSpan">activedirectory.filters.EqualityFilter.prototype.</span>_toBer
+            <span class="apidocSignatureSpan">(ber)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.filters.EqualityFilter.prototype.matches">
+            function <span class="apidocSignatureSpan">activedirectory.filters.EqualityFilter.prototype.</span>matches
+            <span class="apidocSignatureSpan">(target, strictAttrCase)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.filters.EqualityFilter.prototype.parse">
+            function <span class="apidocSignatureSpan">activedirectory.filters.EqualityFilter.prototype.</span>parse
+            <span class="apidocSignatureSpan">(ber)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.filters.EqualityFilter.prototype.toBer">
+            function <span class="apidocSignatureSpan">activedirectory.filters.EqualityFilter.prototype.</span>toBer
+            <span class="apidocSignatureSpan">(ber)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.activedirectory.filters.EqualityFilter.super_.prototype">module activedirectory.filters.EqualityFilter.super_.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.filters.EqualityFilter.super_.prototype.matches">
+            function <span class="apidocSignatureSpan">activedirectory.filters.EqualityFilter.super_.prototype.</span>matches
+            <span class="apidocSignatureSpan">(target, strictAttrCase)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.filters.EqualityFilter.super_.prototype.toString">
+            function <span class="apidocSignatureSpan">activedirectory.filters.EqualityFilter.super_.prototype.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.activedirectory.filters.ExtensibleFilter">module activedirectory.filters.ExtensibleFilter</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.filters.ExtensibleFilter.ExtensibleFilter">
+            function <span class="apidocSignatureSpan">activedirectory.filters.</span>ExtensibleFilter
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.filters.ExtensibleFilter.super_">
+            function <span class="apidocSignatureSpan">activedirectory.filters.ExtensibleFilter.</span>super_
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.activedirectory.filters.ExtensibleFilter.prototype">module activedirectory.filters.ExtensibleFilter.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.filters.ExtensibleFilter.prototype._toBer">
+            function <span class="apidocSignatureSpan">activedirectory.filters.ExtensibleFilter.prototype.</span>_toBer
+            <span class="apidocSignatureSpan">(ber)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.filters.ExtensibleFilter.prototype.parse">
+            function <span class="apidocSignatureSpan">activedirectory.filters.ExtensibleFilter.prototype.</span>parse
+            <span class="apidocSignatureSpan">(ber)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.filters.ExtensibleFilter.prototype.toBer">
+            function <span class="apidocSignatureSpan">activedirectory.filters.ExtensibleFilter.prototype.</span>toBer
+            <span class="apidocSignatureSpan">(ber)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.activedirectory.filters.ExtensibleFilter.super_.prototype">module activedirectory.filters.ExtensibleFilter.super_.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.filters.ExtensibleFilter.super_.prototype.matches">
+            function <span class="apidocSignatureSpan">activedirectory.filters.ExtensibleFilter.super_.prototype.</span>matches
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.filters.ExtensibleFilter.super_.prototype.toString">
+            function <span class="apidocSignatureSpan">activedirectory.filters.ExtensibleFilter.super_.prototype.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.activedirectory.filters.GreaterThanEqualsFilter">module activedirectory.filters.GreaterThanEqualsFilter</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.filters.GreaterThanEqualsFilter.GreaterThanEqualsFilter">
+            function <span class="apidocSignatureSpan">activedirectory.filters.</span>GreaterThanEqualsFilter
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.filters.GreaterThanEqualsFilter.super_">
+            function <span class="apidocSignatureSpan">activedirectory.filters.GreaterThanEqualsFilter.</span>super_
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.activedirectory.filters.GreaterThanEqualsFilter.prototype">module activedirectory.filters.GreaterThanEqualsFilter.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.filters.GreaterThanEqualsFilter.prototype._toBer">
+            function <span class="apidocSignatureSpan">activedirectory.filters.GreaterThanEqualsFilter.prototype.</span>_toBer
+            <span class="apidocSignatureSpan">(ber)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.filters.GreaterThanEqualsFilter.prototype.parse">
+            function <span class="apidocSignatureSpan">activedirectory.filters.GreaterThanEqualsFilter.prototype.</span>parse
+            <span class="apidocSignatureSpan">(ber)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.filters.GreaterThanEqualsFilter.prototype.toBer">
+            function <span class="apidocSignatureSpan">activedirectory.filters.GreaterThanEqualsFilter.prototype.</span>toBer
+            <span class="apidocSignatureSpan">(ber)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.activedirectory.filters.GreaterThanEqualsFilter.super_.prototype">module activedirectory.filters.GreaterThanEqualsFilter.super_.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.filters.GreaterThanEqualsFilter.super_.prototype.matches">
+            function <span class="apidocSignatureSpan">activedirectory.filters.GreaterThanEqualsFilter.super_.prototype.</span>matches
+            <span class="apidocSignatureSpan">(target, strictAttrCase)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.filters.GreaterThanEqualsFilter.super_.prototype.toString">
+            function <span class="apidocSignatureSpan">activedirectory.filters.GreaterThanEqualsFilter.super_.prototype.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.activedirectory.filters.LessThanEqualsFilter">module activedirectory.filters.LessThanEqualsFilter</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.filters.LessThanEqualsFilter.LessThanEqualsFilter">
+            function <span class="apidocSignatureSpan">activedirectory.filters.</span>LessThanEqualsFilter
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.filters.LessThanEqualsFilter.super_">
+            function <span class="apidocSignatureSpan">activedirectory.filters.LessThanEqualsFilter.</span>super_
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.activedirectory.filters.LessThanEqualsFilter.prototype">module activedirectory.filters.LessThanEqualsFilter.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.filters.LessThanEqualsFilter.prototype._toBer">
+            function <span class="apidocSignatureSpan">activedirectory.filters.LessThanEqualsFilter.prototype.</span>_toBer
+            <span class="apidocSignatureSpan">(ber)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.filters.LessThanEqualsFilter.prototype.parse">
+            function <span class="apidocSignatureSpan">activedirectory.filters.LessThanEqualsFilter.prototype.</span>parse
+            <span class="apidocSignatureSpan">(ber)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.filters.LessThanEqualsFilter.prototype.toBer">
+            function <span class="apidocSignatureSpan">activedirectory.filters.LessThanEqualsFilter.prototype.</span>toBer
+            <span class="apidocSignatureSpan">(ber)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.activedirectory.filters.LessThanEqualsFilter.super_.prototype">module activedirectory.filters.LessThanEqualsFilter.super_.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.filters.LessThanEqualsFilter.super_.prototype.matches">
+            function <span class="apidocSignatureSpan">activedirectory.filters.LessThanEqualsFilter.super_.prototype.</span>matches
+            <span class="apidocSignatureSpan">(target, strictAttrCase)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.filters.LessThanEqualsFilter.super_.prototype.toString">
+            function <span class="apidocSignatureSpan">activedirectory.filters.LessThanEqualsFilter.super_.prototype.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.activedirectory.filters.NotFilter">module activedirectory.filters.NotFilter</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.filters.NotFilter.NotFilter">
+            function <span class="apidocSignatureSpan">activedirectory.filters.</span>NotFilter
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.filters.NotFilter.super_">
+            function <span class="apidocSignatureSpan">activedirectory.filters.NotFilter.</span>super_
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.activedirectory.filters.NotFilter.prototype">module activedirectory.filters.NotFilter.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.filters.NotFilter.prototype._toBer">
+            function <span class="apidocSignatureSpan">activedirectory.filters.NotFilter.prototype.</span>_toBer
+            <span class="apidocSignatureSpan">(ber)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.filters.NotFilter.prototype.toBer">
+            function <span class="apidocSignatureSpan">activedirectory.filters.NotFilter.prototype.</span>toBer
+            <span class="apidocSignatureSpan">(ber)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.activedirectory.filters.NotFilter.super_.prototype">module activedirectory.filters.NotFilter.super_.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.filters.NotFilter.super_.prototype.addFilter">
+            function <span class="apidocSignatureSpan">activedirectory.filters.NotFilter.super_.prototype.</span>addFilter
+            <span class="apidocSignatureSpan">(filter)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.filters.NotFilter.super_.prototype.matches">
+            function <span class="apidocSignatureSpan">activedirectory.filters.NotFilter.super_.prototype.</span>matches
+            <span class="apidocSignatureSpan">(target, strictAttrCase)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.filters.NotFilter.super_.prototype.toString">
+            function <span class="apidocSignatureSpan">activedirectory.filters.NotFilter.super_.prototype.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.activedirectory.filters.OrFilter">module activedirectory.filters.OrFilter</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.filters.OrFilter.OrFilter">
+            function <span class="apidocSignatureSpan">activedirectory.filters.</span>OrFilter
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.filters.OrFilter.super_">
+            function <span class="apidocSignatureSpan">activedirectory.filters.OrFilter.</span>super_
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.activedirectory.filters.OrFilter.prototype">module activedirectory.filters.OrFilter.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.filters.OrFilter.prototype._toBer">
+            function <span class="apidocSignatureSpan">activedirectory.filters.OrFilter.prototype.</span>_toBer
+            <span class="apidocSignatureSpan">(ber)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.filters.OrFilter.prototype.toBer">
+            function <span class="apidocSignatureSpan">activedirectory.filters.OrFilter.prototype.</span>toBer
+            <span class="apidocSignatureSpan">(ber)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.activedirectory.filters.OrFilter.super_.prototype">module activedirectory.filters.OrFilter.super_.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.filters.OrFilter.super_.prototype.addFilter">
+            function <span class="apidocSignatureSpan">activedirectory.filters.OrFilter.super_.prototype.</span>addFilter
+            <span class="apidocSignatureSpan">(filter)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.filters.OrFilter.super_.prototype.matches">
+            function <span class="apidocSignatureSpan">activedirectory.filters.OrFilter.super_.prototype.</span>matches
+            <span class="apidocSignatureSpan">(target, strictAttrCase)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.filters.OrFilter.super_.prototype.toString">
+            function <span class="apidocSignatureSpan">activedirectory.filters.OrFilter.super_.prototype.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.activedirectory.filters.PresenceFilter">module activedirectory.filters.PresenceFilter</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.filters.PresenceFilter.PresenceFilter">
+            function <span class="apidocSignatureSpan">activedirectory.filters.</span>PresenceFilter
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.filters.PresenceFilter.super_">
+            function <span class="apidocSignatureSpan">activedirectory.filters.PresenceFilter.</span>super_
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.activedirectory.filters.PresenceFilter.prototype">module activedirectory.filters.PresenceFilter.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.filters.PresenceFilter.prototype._toBer">
+            function <span class="apidocSignatureSpan">activedirectory.filters.PresenceFilter.prototype.</span>_toBer
+            <span class="apidocSignatureSpan">(ber)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.filters.PresenceFilter.prototype.parse">
+            function <span class="apidocSignatureSpan">activedirectory.filters.PresenceFilter.prototype.</span>parse
+            <span class="apidocSignatureSpan">(ber)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.filters.PresenceFilter.prototype.toBer">
+            function <span class="apidocSignatureSpan">activedirectory.filters.PresenceFilter.prototype.</span>toBer
+            <span class="apidocSignatureSpan">(ber)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.activedirectory.filters.PresenceFilter.super_.prototype">module activedirectory.filters.PresenceFilter.super_.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.filters.PresenceFilter.super_.prototype.matches">
+            function <span class="apidocSignatureSpan">activedirectory.filters.PresenceFilter.super_.prototype.</span>matches
+            <span class="apidocSignatureSpan">(target, strictAttrCase)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.filters.PresenceFilter.super_.prototype.toString">
+            function <span class="apidocSignatureSpan">activedirectory.filters.PresenceFilter.super_.prototype.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.activedirectory.filters.SubstringFilter">module activedirectory.filters.SubstringFilter</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.filters.SubstringFilter.SubstringFilter">
+            function <span class="apidocSignatureSpan">activedirectory.filters.</span>SubstringFilter
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.filters.SubstringFilter.super_">
+            function <span class="apidocSignatureSpan">activedirectory.filters.SubstringFilter.</span>super_
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.activedirectory.filters.SubstringFilter.prototype">module activedirectory.filters.SubstringFilter.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.filters.SubstringFilter.prototype._toBer">
+            function <span class="apidocSignatureSpan">activedirectory.filters.SubstringFilter.prototype.</span>_toBer
+            <span class="apidocSignatureSpan">(ber)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.filters.SubstringFilter.prototype.parse">
+            function <span class="apidocSignatureSpan">activedirectory.filters.SubstringFilter.prototype.</span>parse
+            <span class="apidocSignatureSpan">(ber)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.filters.SubstringFilter.prototype.toBer">
+            function <span class="apidocSignatureSpan">activedirectory.filters.SubstringFilter.prototype.</span>toBer
+            <span class="apidocSignatureSpan">(ber)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.activedirectory.filters.SubstringFilter.super_.prototype">module activedirectory.filters.SubstringFilter.super_.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.filters.SubstringFilter.super_.prototype.matches">
+            function <span class="apidocSignatureSpan">activedirectory.filters.SubstringFilter.super_.prototype.</span>matches
+            <span class="apidocSignatureSpan">(target, strictAttrCase)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.activedirectory.filters.SubstringFilter.super_.prototype.toString">
+            function <span class="apidocSignatureSpan">activedirectory.filters.SubstringFilter.super_.prototype.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.activedirectory" id="apidoc.module.activedirectory">module activedirectory</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.filters.AndFilter" id="apidoc.element.activedirectory.filters.AndFilter">
+        function <span class="apidocSignatureSpan">activedirectory.</span>filters.AndFilter
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function AndFilter(options) {
+  parents.AndFilter.call(this, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.filters.ApproximateFilter" id="apidoc.element.activedirectory.filters.ApproximateFilter">
+        function <span class="apidocSignatureSpan">activedirectory.</span>filters.ApproximateFilter
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ApproximateFilter(options) {
+  parents.ApproximateFilter.call(this, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.filters.EqualityFilter" id="apidoc.element.activedirectory.filters.EqualityFilter">
+        function <span class="apidocSignatureSpan">activedirectory.</span>filters.EqualityFilter
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function EqualityFilter(options) {
+  parents.EqualityFilter.call(this, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.filters.ExtensibleFilter" id="apidoc.element.activedirectory.filters.ExtensibleFilter">
+        function <span class="apidocSignatureSpan">activedirectory.</span>filters.ExtensibleFilter
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ExtensibleFilter(options) {
+  parents.ExtensibleFilter.call(this, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.filters.GreaterThanEqualsFilter" id="apidoc.element.activedirectory.filters.GreaterThanEqualsFilter">
+        function <span class="apidocSignatureSpan">activedirectory.</span>filters.GreaterThanEqualsFilter
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function GreaterThanEqualsFilter(options) {
+  parents.GreaterThanEqualsFilter.call(this, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.filters.LessThanEqualsFilter" id="apidoc.element.activedirectory.filters.LessThanEqualsFilter">
+        function <span class="apidocSignatureSpan">activedirectory.</span>filters.LessThanEqualsFilter
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function LessThanEqualsFilter(options) {
+  parents.LessThanEqualsFilter.call(this, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.filters.NotFilter" id="apidoc.element.activedirectory.filters.NotFilter">
+        function <span class="apidocSignatureSpan">activedirectory.</span>filters.NotFilter
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function NotFilter(options) {
+  parents.NotFilter.call(this, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.filters.OrFilter" id="apidoc.element.activedirectory.filters.OrFilter">
+        function <span class="apidocSignatureSpan">activedirectory.</span>filters.OrFilter
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function OrFilter(options) {
+  parents.OrFilter.call(this, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.filters.PresenceFilter" id="apidoc.element.activedirectory.filters.PresenceFilter">
+        function <span class="apidocSignatureSpan">activedirectory.</span>filters.PresenceFilter
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function PresenceFilter(options) {
+  parents.PresenceFilter.call(this, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.filters.SubstringFilter" id="apidoc.element.activedirectory.filters.SubstringFilter">
+        function <span class="apidocSignatureSpan">activedirectory.</span>filters.SubstringFilter
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function SubstringFilter(options) {
+  parents.SubstringFilter.call(this, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.super_" id="apidoc.element.activedirectory.super_">
+        function <span class="apidocSignatureSpan">activedirectory.</span>super_
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function EventEmitter() {
+  EventEmitter.init.call(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.activedirectory.filters" id="apidoc.module.activedirectory.filters">module activedirectory.filters</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.filters.AndFilter" id="apidoc.element.activedirectory.filters.AndFilter">
+        function <span class="apidocSignatureSpan">activedirectory.filters.</span>AndFilter
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function AndFilter(options) {
+  parents.AndFilter.call(this, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.filters.ApproximateFilter" id="apidoc.element.activedirectory.filters.ApproximateFilter">
+        function <span class="apidocSignatureSpan">activedirectory.filters.</span>ApproximateFilter
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ApproximateFilter(options) {
+  parents.ApproximateFilter.call(this, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.filters.EqualityFilter" id="apidoc.element.activedirectory.filters.EqualityFilter">
+        function <span class="apidocSignatureSpan">activedirectory.filters.</span>EqualityFilter
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function EqualityFilter(options) {
+  parents.EqualityFilter.call(this, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.filters.ExtensibleFilter" id="apidoc.element.activedirectory.filters.ExtensibleFilter">
+        function <span class="apidocSignatureSpan">activedirectory.filters.</span>ExtensibleFilter
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ExtensibleFilter(options) {
+  parents.ExtensibleFilter.call(this, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.filters.GreaterThanEqualsFilter" id="apidoc.element.activedirectory.filters.GreaterThanEqualsFilter">
+        function <span class="apidocSignatureSpan">activedirectory.filters.</span>GreaterThanEqualsFilter
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function GreaterThanEqualsFilter(options) {
+  parents.GreaterThanEqualsFilter.call(this, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.filters.LessThanEqualsFilter" id="apidoc.element.activedirectory.filters.LessThanEqualsFilter">
+        function <span class="apidocSignatureSpan">activedirectory.filters.</span>LessThanEqualsFilter
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function LessThanEqualsFilter(options) {
+  parents.LessThanEqualsFilter.call(this, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.filters.NotFilter" id="apidoc.element.activedirectory.filters.NotFilter">
+        function <span class="apidocSignatureSpan">activedirectory.filters.</span>NotFilter
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function NotFilter(options) {
+  parents.NotFilter.call(this, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.filters.OrFilter" id="apidoc.element.activedirectory.filters.OrFilter">
+        function <span class="apidocSignatureSpan">activedirectory.filters.</span>OrFilter
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function OrFilter(options) {
+  parents.OrFilter.call(this, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.filters.PresenceFilter" id="apidoc.element.activedirectory.filters.PresenceFilter">
+        function <span class="apidocSignatureSpan">activedirectory.filters.</span>PresenceFilter
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function PresenceFilter(options) {
+  parents.PresenceFilter.call(this, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.filters.SubstringFilter" id="apidoc.element.activedirectory.filters.SubstringFilter">
+        function <span class="apidocSignatureSpan">activedirectory.filters.</span>SubstringFilter
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function SubstringFilter(options) {
+  parents.SubstringFilter.call(this, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.filters.isFilter" id="apidoc.element.activedirectory.filters.isFilter">
+        function <span class="apidocSignatureSpan">activedirectory.filters.</span>isFilter
+        <span class="apidocSignatureSpan">(filter)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isFilter(filter) {
+  if (!filter || typeof (filter) !== 'object') {
+    return false;
+  }
+  // Do our best to duck-type it
+  if (typeof (filter.toBer) === 'function' &amp;&amp;
+      typeof (filter.matches) === 'function' &amp;&amp;
+      TYPES[filter.type] !== undefined) {
+    return true;
+  }
+  return false;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.filters.parse" id="apidoc.element.activedirectory.filters.parse">
+        function <span class="apidocSignatureSpan">activedirectory.filters.</span>parse
+        <span class="apidocSignatureSpan">(ber)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">parse = function (ber) {
+  if (!ber || !(ber instanceof BerReader))
+    throw new TypeError('ber (BerReader) required');
+
+  return _parse(ber);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.filters.parseString" id="apidoc.element.activedirectory.filters.parseString">
+        function <span class="apidocSignatureSpan">activedirectory.filters.</span>parseString
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function parseString(str) {
+  var generic = parents.parse(str);
+  // The filter object(s) return from ldap-filter.parse lack the toBer/parse
+  // decoration that native ldapjs filter possess.  cloneFilter adds that back.
+  return cloneFilter(generic);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.activedirectory.filters.AndFilter" id="apidoc.module.activedirectory.filters.AndFilter">module activedirectory.filters.AndFilter</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.filters.AndFilter.AndFilter" id="apidoc.element.activedirectory.filters.AndFilter.AndFilter">
+        function <span class="apidocSignatureSpan">activedirectory.filters.</span>AndFilter
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function AndFilter(options) {
+  parents.AndFilter.call(this, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.filters.AndFilter.super_" id="apidoc.element.activedirectory.filters.AndFilter.super_">
+        function <span class="apidocSignatureSpan">activedirectory.filters.AndFilter.</span>super_
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function AndFilter(options) {
+  if (typeof (options) === 'object') {
+    assert.arrayOfObject(options.filters, 'options.filters');
+  } else {
+    options = {};
+  }
+
+  this.__defineGetter__('type', function () { return 'and'; });
+  this.filters = options.filters ? options.filters.slice() : [];
+
+  var self = this;
+  this.__defineGetter__('json', function () {
+    return {
+      type: 'And',
+      filters: self.filters
+    };
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.activedirectory.filters.AndFilter.prototype" id="apidoc.module.activedirectory.filters.AndFilter.prototype">module activedirectory.filters.AndFilter.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.filters.AndFilter.prototype._toBer" id="apidoc.element.activedirectory.filters.AndFilter.prototype._toBer">
+        function <span class="apidocSignatureSpan">activedirectory.filters.AndFilter.prototype.</span>_toBer
+        <span class="apidocSignatureSpan">(ber)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_toBer = function (ber) {
+  assert.ok(ber);
+
+  this.filters.forEach(function (f) {
+    ber = f.toBer(ber);
+  });
+
+  return ber;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.filters.AndFilter.prototype.toBer" id="apidoc.element.activedirectory.filters.AndFilter.prototype.toBer">
+        function <span class="apidocSignatureSpan">activedirectory.filters.AndFilter.prototype.</span>toBer
+        <span class="apidocSignatureSpan">(ber)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toBer(ber) {
+  if (!ber || !(ber instanceof BerWriter))
+    throw new TypeError('ber (BerWriter) required');
+
+  ber.startSequence(TYPES[this.type]);
+  ber = this._toBer(ber);
+  ber.endSequence();
+  return ber;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.activedirectory.filters.AndFilter.super_.prototype" id="apidoc.module.activedirectory.filters.AndFilter.super_.prototype">module activedirectory.filters.AndFilter.super_.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.filters.AndFilter.super_.prototype.addFilter" id="apidoc.element.activedirectory.filters.AndFilter.super_.prototype.addFilter">
+        function <span class="apidocSignatureSpan">activedirectory.filters.AndFilter.super_.prototype.</span>addFilter
+        <span class="apidocSignatureSpan">(filter)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">addFilter = function (filter) {
+  assert.object(filter, 'filter');
+
+  this.filters.push(filter);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.filters.AndFilter.super_.prototype.matches" id="apidoc.element.activedirectory.filters.AndFilter.super_.prototype.matches">
+        function <span class="apidocSignatureSpan">activedirectory.filters.AndFilter.super_.prototype.</span>matches
+        <span class="apidocSignatureSpan">(target, strictAttrCase)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">matches = function (target, strictAttrCase) {
+  assert.object(target, 'target');
+
+  if (this.filters.length === 0) {
+<span class="apidocCodeCommentSpan">    /* true per RFC4526 */
+</span>    return true;
+  }
+
+  for (var i = 0; i &lt; this.filters.length; i++) {
+    if (!this.filters[i].matches(target, strictAttrCase))
+      return false;
+  }
+
+  return true;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.filters.AndFilter.super_.prototype.toString" id="apidoc.element.activedirectory.filters.AndFilter.super_.prototype.toString">
+        function <span class="apidocSignatureSpan">activedirectory.filters.AndFilter.super_.prototype.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+  var str = '(&amp;';
+  this.filters.forEach(function (f) {
+    str += f.toString();
+  });
+  str += ')';
+
+  return str;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.activedirectory.filters.ApproximateFilter" id="apidoc.module.activedirectory.filters.ApproximateFilter">module activedirectory.filters.ApproximateFilter</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.filters.ApproximateFilter.ApproximateFilter" id="apidoc.element.activedirectory.filters.ApproximateFilter.ApproximateFilter">
+        function <span class="apidocSignatureSpan">activedirectory.filters.</span>ApproximateFilter
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ApproximateFilter(options) {
+  parents.ApproximateFilter.call(this, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.filters.ApproximateFilter.super_" id="apidoc.element.activedirectory.filters.ApproximateFilter.super_">
+        function <span class="apidocSignatureSpan">activedirectory.filters.ApproximateFilter.</span>super_
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ApproximateFilter(options) {
+  if (typeof (options) === 'object') {
+    assert.string(options.attribute, 'options.attribute');
+    assert.string(options.value, 'options.value');
+    this.attribute = options.attribute;
+    this.value = options.value;
+  }
+
+  var self = this;
+  this.__defineGetter__('type', function () { return 'approx'; });
+  this.__defineGetter__('json', function () {
+    return {
+      type: 'ApproximateMatch',
+      attribute: self.attribute,
+      value: self.value
+    };
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.activedirectory.filters.ApproximateFilter.prototype" id="apidoc.module.activedirectory.filters.ApproximateFilter.prototype">module activedirectory.filters.ApproximateFilter.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.filters.ApproximateFilter.prototype._toBer" id="apidoc.element.activedirectory.filters.ApproximateFilter.prototype._toBer">
+        function <span class="apidocSignatureSpan">activedirectory.filters.ApproximateFilter.prototype.</span>_toBer
+        <span class="apidocSignatureSpan">(ber)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_toBer = function (ber) {
+  assert.ok(ber);
+
+  ber.writeString(this.attribute);
+  ber.writeString(this.value);
+
+  return ber;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.filters.ApproximateFilter.prototype.parse" id="apidoc.element.activedirectory.filters.ApproximateFilter.prototype.parse">
+        function <span class="apidocSignatureSpan">activedirectory.filters.ApproximateFilter.prototype.</span>parse
+        <span class="apidocSignatureSpan">(ber)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">parse = function (ber) {
+  assert.ok(ber);
+
+  this.attribute = ber.readString().toLowerCase();
+  this.value = ber.readString();
+
+  return true;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.filters.ApproximateFilter.prototype.toBer" id="apidoc.element.activedirectory.filters.ApproximateFilter.prototype.toBer">
+        function <span class="apidocSignatureSpan">activedirectory.filters.ApproximateFilter.prototype.</span>toBer
+        <span class="apidocSignatureSpan">(ber)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toBer(ber) {
+  if (!ber || !(ber instanceof BerWriter))
+    throw new TypeError('ber (BerWriter) required');
+
+  ber.startSequence(TYPES[this.type]);
+  ber = this._toBer(ber);
+  ber.endSequence();
+  return ber;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.activedirectory.filters.ApproximateFilter.super_.prototype" id="apidoc.module.activedirectory.filters.ApproximateFilter.super_.prototype">module activedirectory.filters.ApproximateFilter.super_.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.filters.ApproximateFilter.super_.prototype.matches" id="apidoc.element.activedirectory.filters.ApproximateFilter.super_.prototype.matches">
+        function <span class="apidocSignatureSpan">activedirectory.filters.ApproximateFilter.super_.prototype.</span>matches
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">matches = function () {
+  // Consumers must implement this themselves
+  throw new Error('approx match implementation missing');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.filters.ApproximateFilter.super_.prototype.toString" id="apidoc.element.activedirectory.filters.ApproximateFilter.super_.prototype.toString">
+        function <span class="apidocSignatureSpan">activedirectory.filters.ApproximateFilter.super_.prototype.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+  return ('(' + helpers.escape(this.attribute) +
+          '~=' + helpers.escape(this.value) + ')');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.activedirectory.filters.EqualityFilter" id="apidoc.module.activedirectory.filters.EqualityFilter">module activedirectory.filters.EqualityFilter</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.filters.EqualityFilter.EqualityFilter" id="apidoc.element.activedirectory.filters.EqualityFilter.EqualityFilter">
+        function <span class="apidocSignatureSpan">activedirectory.filters.</span>EqualityFilter
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function EqualityFilter(options) {
+  parents.EqualityFilter.call(this, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.filters.EqualityFilter.super_" id="apidoc.element.activedirectory.filters.EqualityFilter.super_">
+        function <span class="apidocSignatureSpan">activedirectory.filters.EqualityFilter.</span>super_
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function EqualityFilter(options) {
+  if (typeof (options) === 'object') {
+    assert.string(options.attribute, 'options.attribute');
+    this.attribute = options.attribute;
+    // Prefer Buffers over strings to make filter cloning easier
+    if (options.raw) {
+      this.raw = options.raw;
+    } else {
+      this.raw = new Buffer(options.value);
+    }
+  } else {
+    this.raw = new Buffer(0);
+  }
+
+  var self = this;
+  this.__defineGetter__('type', function () { return 'equal'; });
+  this.__defineGetter__('value', function () {
+    return (Buffer.isBuffer(self.raw)) ? self.raw.toString() : self.raw;
+  });
+  this.__defineSetter__('value', function (data) {
+    if (typeof (data) === 'string') {
+      self.raw = new Buffer(data);
+    } else if (Buffer.isBuffer(data)) {
+      self.raw = new Buffer(data.length);
+      data.copy(self.raw);
+    } else {
+      self.raw = data;
+    }
+  });
+  this.__defineGetter__('json', function () {
+    return {
+      type: 'EqualityMatch',
+      attribute: self.attribute,
+      value: self.value
+    };
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.activedirectory.filters.EqualityFilter.prototype" id="apidoc.module.activedirectory.filters.EqualityFilter.prototype">module activedirectory.filters.EqualityFilter.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.filters.EqualityFilter.prototype._toBer" id="apidoc.element.activedirectory.filters.EqualityFilter.prototype._toBer">
+        function <span class="apidocSignatureSpan">activedirectory.filters.EqualityFilter.prototype.</span>_toBer
+        <span class="apidocSignatureSpan">(ber)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_toBer = function (ber) {
+  assert.ok(ber);
+
+  ber.writeString(this.attribute);
+  ber.writeBuffer(this.raw, ASN1.OctetString);
+
+  return ber;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.filters.EqualityFilter.prototype.matches" id="apidoc.element.activedirectory.filters.EqualityFilter.prototype.matches">
+        function <span class="apidocSignatureSpan">activedirectory.filters.EqualityFilter.prototype.</span>matches
+        <span class="apidocSignatureSpan">(target, strictAttrCase)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">matches = function (target, strictAttrCase) {
+  assert.object(target, 'target');
+
+  var tv = parents.getAttrValue(target, this.attribute, strictAttrCase);
+  var value = this.value;
+
+  if (this.attribute.toLowerCase() === 'objectclass') {
+<span class="apidocCodeCommentSpan">    /*
+     * Perform case-insensitive match for objectClass since nearly every LDAP
+     * implementation behaves in this manner.
+     */
+</span>    value = value.toLowerCase();
+    return parents.testValues(function (v) {
+      return value === v.toLowerCase();
+    }, tv);
+  } else {
+    return parents.testValues(function (v) {
+      return value === v;
+    }, tv);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.filters.EqualityFilter.prototype.parse" id="apidoc.element.activedirectory.filters.EqualityFilter.prototype.parse">
+        function <span class="apidocSignatureSpan">activedirectory.filters.EqualityFilter.prototype.</span>parse
+        <span class="apidocSignatureSpan">(ber)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">parse = function (ber) {
+  assert.ok(ber);
+
+  this.attribute = ber.readString().toLowerCase();
+  this.value = ber.readString(ASN1.OctetString, true);
+
+  if (this.attribute === 'objectclass')
+    this.value = this.value.toLowerCase();
+
+  return true;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.filters.EqualityFilter.prototype.toBer" id="apidoc.element.activedirectory.filters.EqualityFilter.prototype.toBer">
+        function <span class="apidocSignatureSpan">activedirectory.filters.EqualityFilter.prototype.</span>toBer
+        <span class="apidocSignatureSpan">(ber)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toBer(ber) {
+  if (!ber || !(ber instanceof BerWriter))
+    throw new TypeError('ber (BerWriter) required');
+
+  ber.startSequence(TYPES[this.type]);
+  ber = this._toBer(ber);
+  ber.endSequence();
+  return ber;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.activedirectory.filters.EqualityFilter.super_.prototype" id="apidoc.module.activedirectory.filters.EqualityFilter.super_.prototype">module activedirectory.filters.EqualityFilter.super_.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.filters.EqualityFilter.super_.prototype.matches" id="apidoc.element.activedirectory.filters.EqualityFilter.super_.prototype.matches">
+        function <span class="apidocSignatureSpan">activedirectory.filters.EqualityFilter.super_.prototype.</span>matches
+        <span class="apidocSignatureSpan">(target, strictAttrCase)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">matches = function (target, strictAttrCase) {
+  assert.object(target, 'target');
+
+  var tv = helpers.getAttrValue(target, this.attribute, strictAttrCase);
+  var value = this.value;
+
+  return helpers.testValues(function (v) {
+    return value === v;
+  }, tv);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.filters.EqualityFilter.super_.prototype.toString" id="apidoc.element.activedirectory.filters.EqualityFilter.super_.prototype.toString">
+        function <span class="apidocSignatureSpan">activedirectory.filters.EqualityFilter.super_.prototype.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+  return ('(' + helpers.escape(this.attribute) +
+          '=' + helpers.escape(this.value) + ')');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.activedirectory.filters.ExtensibleFilter" id="apidoc.module.activedirectory.filters.ExtensibleFilter">module activedirectory.filters.ExtensibleFilter</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.filters.ExtensibleFilter.ExtensibleFilter" id="apidoc.element.activedirectory.filters.ExtensibleFilter.ExtensibleFilter">
+        function <span class="apidocSignatureSpan">activedirectory.filters.</span>ExtensibleFilter
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ExtensibleFilter(options) {
+  parents.ExtensibleFilter.call(this, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.filters.ExtensibleFilter.super_" id="apidoc.element.activedirectory.filters.ExtensibleFilter.super_">
+        function <span class="apidocSignatureSpan">activedirectory.filters.ExtensibleFilter.</span>super_
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ExtensibleFilter(options) {
+  if (typeof (options) === 'object') {
+    assert.optionalString(options.rule, 'options.rule');
+    assert.optionalString(options.matchType, 'options.matchType');
+    assert.optionalString(options.attribute, 'options.attribute');
+    assert.optionalString(options.value, 'options.value');
+  } else {
+    options = {};
+  }
+
+  if (options.matchType !== undefined) {
+    this.matchType = options.matchType;
+  } else {
+    this.matchType = options.attribute;
+  }
+  this.dnAttributes = options.dnAttributes || false;
+  this.rule = options.rule;
+  this.value = (options.value !== undefined) ? options.value : '';
+
+  var self = this;
+  this.__defineGetter__('type', function () { return 'ext'; });
+  this.__defineGetter__('json', function () {
+    return {
+      type: 'ExtensibleMatch',
+      matchRule: self.rule,
+      matchType: self.matchType,
+      matchValue: self.value,
+      dnAttributes: self.dnAttributes
+    };
+  });
+  this.__defineGetter__('matchingRule', function () {
+    return self.rule;
+  });
+  this.__defineGetter__('matchValue', function () {
+    return self.value;
+  });
+  this.__defineGetter__('attribute', function () {
+    return this.matchType;
+  });
+  this.__defineSetter__('attribute', function (value) {
+    this.matchType = value;
+  });
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.activedirectory.filters.ExtensibleFilter.prototype" id="apidoc.module.activedirectory.filters.ExtensibleFilter.prototype">module activedirectory.filters.ExtensibleFilter.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.filters.ExtensibleFilter.prototype._toBer" id="apidoc.element.activedirectory.filters.ExtensibleFilter.prototype._toBer">
+        function <span class="apidocSignatureSpan">activedirectory.filters.ExtensibleFilter.prototype.</span>_toBer
+        <span class="apidocSignatureSpan">(ber)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_toBer = function (ber) {
+  assert.ok(ber);
+
+  if (this.rule)
+    ber.writeString(this.rule, 0x81);
+  if (this.matchType)
+    ber.writeString(this.matchType, 0x82);
+
+  ber.writeString(this.value, 0x83);
+  if (this.dnAttributes)
+    ber.writeBoolean(this.dnAttributes, 0x84);
+
+  return ber;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.filters.ExtensibleFilter.prototype.parse" id="apidoc.element.activedirectory.filters.ExtensibleFilter.prototype.parse">
+        function <span class="apidocSignatureSpan">activedirectory.filters.ExtensibleFilter.prototype.</span>parse
+        <span class="apidocSignatureSpan">(ber)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">parse = function (ber) {
+  var end = ber.offset + ber.length;
+  while (ber.offset &lt; end) {
+    var tag = ber.peek();
+    switch (tag) {
+    case 0x81:
+      this.rule = ber.readString(tag);
+      break;
+    case 0x82:
+      this.matchType = ber.readString(tag);
+      break;
+    case 0x83:
+      this.value = ber.readString(tag);
+      break;
+    case 0x84:
+      this.dnAttributes = ber.readBoolean(tag);
+      break;
+    default:
+      throw new Error('Invalid ext_match filter type: 0x' + tag.toString(16));
+    }
+  }
+
+  return true;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.filters.ExtensibleFilter.prototype.toBer" id="apidoc.element.activedirectory.filters.ExtensibleFilter.prototype.toBer">
+        function <span class="apidocSignatureSpan">activedirectory.filters.ExtensibleFilter.prototype.</span>toBer
+        <span class="apidocSignatureSpan">(ber)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toBer(ber) {
+  if (!ber || !(ber instanceof BerWriter))
+    throw new TypeError('ber (BerWriter) required');
+
+  ber.startSequence(TYPES[this.type]);
+  ber = this._toBer(ber);
+  ber.endSequence();
+  return ber;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.activedirectory.filters.ExtensibleFilter.super_.prototype" id="apidoc.module.activedirectory.filters.ExtensibleFilter.super_.prototype">module activedirectory.filters.ExtensibleFilter.super_.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.filters.ExtensibleFilter.super_.prototype.matches" id="apidoc.element.activedirectory.filters.ExtensibleFilter.super_.prototype.matches">
+        function <span class="apidocSignatureSpan">activedirectory.filters.ExtensibleFilter.super_.prototype.</span>matches
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">matches = function () {
+  // Consumers must implement this themselves
+  throw new Error('ext match implementation missing');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.filters.ExtensibleFilter.super_.prototype.toString" id="apidoc.element.activedirectory.filters.ExtensibleFilter.super_.prototype.toString">
+        function <span class="apidocSignatureSpan">activedirectory.filters.ExtensibleFilter.super_.prototype.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+  var str = '(';
+
+  if (this.matchType)
+    str += this.matchType;
+
+  str += ':';
+
+  if (this.dnAttributes)
+    str += 'dn:';
+
+  if (this.rule)
+    str += this.rule + ':';
+
+  return (str + '=' + this.value + ')');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.activedirectory.filters.GreaterThanEqualsFilter" id="apidoc.module.activedirectory.filters.GreaterThanEqualsFilter">module activedirectory.filters.GreaterThanEqualsFilter</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.filters.GreaterThanEqualsFilter.GreaterThanEqualsFilter" id="apidoc.element.activedirectory.filters.GreaterThanEqualsFilter.GreaterThanEqualsFilter">
+        function <span class="apidocSignatureSpan">activedirectory.filters.</span>GreaterThanEqualsFilter
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function GreaterThanEqualsFilter(options) {
+  parents.GreaterThanEqualsFilter.call(this, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.filters.GreaterThanEqualsFilter.super_" id="apidoc.element.activedirectory.filters.GreaterThanEqualsFilter.super_">
+        function <span class="apidocSignatureSpan">activedirectory.filters.GreaterThanEqualsFilter.</span>super_
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function GreaterThanEqualsFilter(options) {
+  if (typeof (options) === 'object') {
+    assert.string(options.attribute, 'options.attribute');
+    assert.string(options.value, 'options.value');
+    this.attribute = options.attribute;
+    this.value = options.value;
+  }
+
+  var self = this;
+  this.__defineGetter__('type', function () { return 'ge'; });
+  this.__defineGetter__('json', function () {
+    return {
+      type: 'GreaterThanEqualsMatch',
+      attribute: self.attribute,
+      value: self.value
+    };
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.activedirectory.filters.GreaterThanEqualsFilter.prototype" id="apidoc.module.activedirectory.filters.GreaterThanEqualsFilter.prototype">module activedirectory.filters.GreaterThanEqualsFilter.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.filters.GreaterThanEqualsFilter.prototype._toBer" id="apidoc.element.activedirectory.filters.GreaterThanEqualsFilter.prototype._toBer">
+        function <span class="apidocSignatureSpan">activedirectory.filters.GreaterThanEqualsFilter.prototype.</span>_toBer
+        <span class="apidocSignatureSpan">(ber)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_toBer = function (ber) {
+  assert.ok(ber);
+
+  ber.writeString(this.attribute);
+  ber.writeString(this.value);
+
+  return ber;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.filters.GreaterThanEqualsFilter.prototype.parse" id="apidoc.element.activedirectory.filters.GreaterThanEqualsFilter.prototype.parse">
+        function <span class="apidocSignatureSpan">activedirectory.filters.GreaterThanEqualsFilter.prototype.</span>parse
+        <span class="apidocSignatureSpan">(ber)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">parse = function (ber) {
+  assert.ok(ber);
+
+  this.attribute = ber.readString().toLowerCase();
+  this.value = ber.readString();
+
+  return true;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.filters.GreaterThanEqualsFilter.prototype.toBer" id="apidoc.element.activedirectory.filters.GreaterThanEqualsFilter.prototype.toBer">
+        function <span class="apidocSignatureSpan">activedirectory.filters.GreaterThanEqualsFilter.prototype.</span>toBer
+        <span class="apidocSignatureSpan">(ber)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toBer(ber) {
+  if (!ber || !(ber instanceof BerWriter))
+    throw new TypeError('ber (BerWriter) required');
+
+  ber.startSequence(TYPES[this.type]);
+  ber = this._toBer(ber);
+  ber.endSequence();
+  return ber;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.activedirectory.filters.GreaterThanEqualsFilter.super_.prototype" id="apidoc.module.activedirectory.filters.GreaterThanEqualsFilter.super_.prototype">module activedirectory.filters.GreaterThanEqualsFilter.super_.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.filters.GreaterThanEqualsFilter.super_.prototype.matches" id="apidoc.element.activedirectory.filters.GreaterThanEqualsFilter.super_.prototype.matches">
+        function <span class="apidocSignatureSpan">activedirectory.filters.GreaterThanEqualsFilter.super_.prototype.</span>matches
+        <span class="apidocSignatureSpan">(target, strictAttrCase)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">matches = function (target, strictAttrCase) {
+  assert.object(target, 'target');
+
+  var tv = helpers.getAttrValue(target, this.attribute, strictAttrCase);
+  var value = this.value;
+
+  return helpers.testValues(function (v) {
+    return value &lt;= v;
+  }, tv);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.filters.GreaterThanEqualsFilter.super_.prototype.toString" id="apidoc.element.activedirectory.filters.GreaterThanEqualsFilter.super_.prototype.toString">
+        function <span class="apidocSignatureSpan">activedirectory.filters.GreaterThanEqualsFilter.super_.prototype.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+  return ('(' + helpers.escape(this.attribute) +
+          '&gt;=' + helpers.escape(this.value) + ')');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.activedirectory.filters.LessThanEqualsFilter" id="apidoc.module.activedirectory.filters.LessThanEqualsFilter">module activedirectory.filters.LessThanEqualsFilter</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.filters.LessThanEqualsFilter.LessThanEqualsFilter" id="apidoc.element.activedirectory.filters.LessThanEqualsFilter.LessThanEqualsFilter">
+        function <span class="apidocSignatureSpan">activedirectory.filters.</span>LessThanEqualsFilter
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function LessThanEqualsFilter(options) {
+  parents.LessThanEqualsFilter.call(this, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.filters.LessThanEqualsFilter.super_" id="apidoc.element.activedirectory.filters.LessThanEqualsFilter.super_">
+        function <span class="apidocSignatureSpan">activedirectory.filters.LessThanEqualsFilter.</span>super_
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function LessThanEqualsFilter(options) {
+  if (typeof (options) === 'object') {
+    assert.string(options.attribute, 'options.attribute');
+    assert.string(options.value, 'options.attribute');
+    this.attribute = options.attribute;
+    this.value = options.value;
+  }
+
+  var self = this;
+  this.__defineGetter__('type', function () { return 'le'; });
+  this.__defineGetter__('json', function () {
+    return {
+      type: 'LessThanEqualsMatch',
+      attribute: self.attribute,
+      value: self.value
+    };
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.activedirectory.filters.LessThanEqualsFilter.prototype" id="apidoc.module.activedirectory.filters.LessThanEqualsFilter.prototype">module activedirectory.filters.LessThanEqualsFilter.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.filters.LessThanEqualsFilter.prototype._toBer" id="apidoc.element.activedirectory.filters.LessThanEqualsFilter.prototype._toBer">
+        function <span class="apidocSignatureSpan">activedirectory.filters.LessThanEqualsFilter.prototype.</span>_toBer
+        <span class="apidocSignatureSpan">(ber)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_toBer = function (ber) {
+  assert.ok(ber);
+
+  ber.writeString(this.attribute);
+  ber.writeString(this.value);
+
+  return ber;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.filters.LessThanEqualsFilter.prototype.parse" id="apidoc.element.activedirectory.filters.LessThanEqualsFilter.prototype.parse">
+        function <span class="apidocSignatureSpan">activedirectory.filters.LessThanEqualsFilter.prototype.</span>parse
+        <span class="apidocSignatureSpan">(ber)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">parse = function (ber) {
+  assert.ok(ber);
+
+  this.attribute = ber.readString().toLowerCase();
+  this.value = ber.readString();
+
+  return true;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.filters.LessThanEqualsFilter.prototype.toBer" id="apidoc.element.activedirectory.filters.LessThanEqualsFilter.prototype.toBer">
+        function <span class="apidocSignatureSpan">activedirectory.filters.LessThanEqualsFilter.prototype.</span>toBer
+        <span class="apidocSignatureSpan">(ber)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toBer(ber) {
+  if (!ber || !(ber instanceof BerWriter))
+    throw new TypeError('ber (BerWriter) required');
+
+  ber.startSequence(TYPES[this.type]);
+  ber = this._toBer(ber);
+  ber.endSequence();
+  return ber;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.activedirectory.filters.LessThanEqualsFilter.super_.prototype" id="apidoc.module.activedirectory.filters.LessThanEqualsFilter.super_.prototype">module activedirectory.filters.LessThanEqualsFilter.super_.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.filters.LessThanEqualsFilter.super_.prototype.matches" id="apidoc.element.activedirectory.filters.LessThanEqualsFilter.super_.prototype.matches">
+        function <span class="apidocSignatureSpan">activedirectory.filters.LessThanEqualsFilter.super_.prototype.</span>matches
+        <span class="apidocSignatureSpan">(target, strictAttrCase)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">matches = function (target, strictAttrCase) {
+  assert.object(target, 'target');
+
+  var tv = helpers.getAttrValue(target, this.attribute, strictAttrCase);
+  var value = this.value;
+
+  return helpers.testValues(function (v) {
+    return value &gt;= v;
+  }, tv);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.filters.LessThanEqualsFilter.super_.prototype.toString" id="apidoc.element.activedirectory.filters.LessThanEqualsFilter.super_.prototype.toString">
+        function <span class="apidocSignatureSpan">activedirectory.filters.LessThanEqualsFilter.super_.prototype.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+  return ('(' + helpers.escape(this.attribute) +
+          '&lt;=' + helpers.escape(this.value) + ')');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.activedirectory.filters.NotFilter" id="apidoc.module.activedirectory.filters.NotFilter">module activedirectory.filters.NotFilter</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.filters.NotFilter.NotFilter" id="apidoc.element.activedirectory.filters.NotFilter.NotFilter">
+        function <span class="apidocSignatureSpan">activedirectory.filters.</span>NotFilter
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function NotFilter(options) {
+  parents.NotFilter.call(this, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.filters.NotFilter.super_" id="apidoc.element.activedirectory.filters.NotFilter.super_">
+        function <span class="apidocSignatureSpan">activedirectory.filters.NotFilter.</span>super_
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function NotFilter(options) {
+  if (typeof (options) === 'object') {
+    assert.object(options.filter, 'options.filter');
+  } else {
+    options = {};
+  }
+
+  this.filter = options.filter || {};
+
+  var self = this;
+  this.__defineGetter__('type', function () { return 'not'; });
+  this.__defineGetter__('json', function () {
+    return {
+      type: 'Not',
+      filter: self.filter
+    };
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.activedirectory.filters.NotFilter.prototype" id="apidoc.module.activedirectory.filters.NotFilter.prototype">module activedirectory.filters.NotFilter.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.filters.NotFilter.prototype._toBer" id="apidoc.element.activedirectory.filters.NotFilter.prototype._toBer">
+        function <span class="apidocSignatureSpan">activedirectory.filters.NotFilter.prototype.</span>_toBer
+        <span class="apidocSignatureSpan">(ber)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_toBer = function (ber) {
+  assert.ok(ber);
+
+  return this.filter.toBer(ber);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.filters.NotFilter.prototype.toBer" id="apidoc.element.activedirectory.filters.NotFilter.prototype.toBer">
+        function <span class="apidocSignatureSpan">activedirectory.filters.NotFilter.prototype.</span>toBer
+        <span class="apidocSignatureSpan">(ber)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toBer(ber) {
+  if (!ber || !(ber instanceof BerWriter))
+    throw new TypeError('ber (BerWriter) required');
+
+  ber.startSequence(TYPES[this.type]);
+  ber = this._toBer(ber);
+  ber.endSequence();
+  return ber;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.activedirectory.filters.NotFilter.super_.prototype" id="apidoc.module.activedirectory.filters.NotFilter.super_.prototype">module activedirectory.filters.NotFilter.super_.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.filters.NotFilter.super_.prototype.addFilter" id="apidoc.element.activedirectory.filters.NotFilter.super_.prototype.addFilter">
+        function <span class="apidocSignatureSpan">activedirectory.filters.NotFilter.super_.prototype.</span>addFilter
+        <span class="apidocSignatureSpan">(filter)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">addFilter = function (filter) {
+  assert.object(filter, 'filter');
+  this.filter = filter;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.filters.NotFilter.super_.prototype.matches" id="apidoc.element.activedirectory.filters.NotFilter.super_.prototype.matches">
+        function <span class="apidocSignatureSpan">activedirectory.filters.NotFilter.super_.prototype.</span>matches
+        <span class="apidocSignatureSpan">(target, strictAttrCase)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">matches = function (target, strictAttrCase) {
+  return !this.filter.matches(target, strictAttrCase);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.filters.NotFilter.super_.prototype.toString" id="apidoc.element.activedirectory.filters.NotFilter.super_.prototype.toString">
+        function <span class="apidocSignatureSpan">activedirectory.filters.NotFilter.super_.prototype.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+  return '(!' + this.filter.toString() + ')';
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.activedirectory.filters.OrFilter" id="apidoc.module.activedirectory.filters.OrFilter">module activedirectory.filters.OrFilter</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.filters.OrFilter.OrFilter" id="apidoc.element.activedirectory.filters.OrFilter.OrFilter">
+        function <span class="apidocSignatureSpan">activedirectory.filters.</span>OrFilter
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function OrFilter(options) {
+  parents.OrFilter.call(this, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.filters.OrFilter.super_" id="apidoc.element.activedirectory.filters.OrFilter.super_">
+        function <span class="apidocSignatureSpan">activedirectory.filters.OrFilter.</span>super_
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function OrFilter(options) {
+  if (typeof (options) === 'object') {
+    assert.arrayOfObject(options.filters, 'options.filters');
+  } else {
+    options = {};
+  }
+
+  this.filters = options.filters ? options.filters.slice() : [];
+
+  var self = this;
+  this.__defineGetter__('type', function () { return 'or'; });
+  this.__defineGetter__('json', function () {
+    return {
+      type: 'Or',
+      filters: self.filters
+    };
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.activedirectory.filters.OrFilter.prototype" id="apidoc.module.activedirectory.filters.OrFilter.prototype">module activedirectory.filters.OrFilter.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.filters.OrFilter.prototype._toBer" id="apidoc.element.activedirectory.filters.OrFilter.prototype._toBer">
+        function <span class="apidocSignatureSpan">activedirectory.filters.OrFilter.prototype.</span>_toBer
+        <span class="apidocSignatureSpan">(ber)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_toBer = function (ber) {
+  assert.ok(ber);
+
+  this.filters.forEach(function (f) {
+    ber = f.toBer(ber);
+  });
+
+  return ber;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.filters.OrFilter.prototype.toBer" id="apidoc.element.activedirectory.filters.OrFilter.prototype.toBer">
+        function <span class="apidocSignatureSpan">activedirectory.filters.OrFilter.prototype.</span>toBer
+        <span class="apidocSignatureSpan">(ber)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toBer(ber) {
+  if (!ber || !(ber instanceof BerWriter))
+    throw new TypeError('ber (BerWriter) required');
+
+  ber.startSequence(TYPES[this.type]);
+  ber = this._toBer(ber);
+  ber.endSequence();
+  return ber;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.activedirectory.filters.OrFilter.super_.prototype" id="apidoc.module.activedirectory.filters.OrFilter.super_.prototype">module activedirectory.filters.OrFilter.super_.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.filters.OrFilter.super_.prototype.addFilter" id="apidoc.element.activedirectory.filters.OrFilter.super_.prototype.addFilter">
+        function <span class="apidocSignatureSpan">activedirectory.filters.OrFilter.super_.prototype.</span>addFilter
+        <span class="apidocSignatureSpan">(filter)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">addFilter = function (filter) {
+  assert.object(filter, 'filter');
+
+  this.filters.push(filter);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.filters.OrFilter.super_.prototype.matches" id="apidoc.element.activedirectory.filters.OrFilter.super_.prototype.matches">
+        function <span class="apidocSignatureSpan">activedirectory.filters.OrFilter.super_.prototype.</span>matches
+        <span class="apidocSignatureSpan">(target, strictAttrCase)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">matches = function (target, strictAttrCase) {
+  assert.object(target, 'target');
+
+  for (var i = 0; i &lt; this.filters.length; i++) {
+    if (this.filters[i].matches(target, strictAttrCase))
+      return true;
+  }
+
+  return false;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.filters.OrFilter.super_.prototype.toString" id="apidoc.element.activedirectory.filters.OrFilter.super_.prototype.toString">
+        function <span class="apidocSignatureSpan">activedirectory.filters.OrFilter.super_.prototype.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+  var str = '(|';
+  this.filters.forEach(function (f) {
+    str += f.toString();
+  });
+  str += ')';
+
+  return str;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.activedirectory.filters.PresenceFilter" id="apidoc.module.activedirectory.filters.PresenceFilter">module activedirectory.filters.PresenceFilter</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.filters.PresenceFilter.PresenceFilter" id="apidoc.element.activedirectory.filters.PresenceFilter.PresenceFilter">
+        function <span class="apidocSignatureSpan">activedirectory.filters.</span>PresenceFilter
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function PresenceFilter(options) {
+  parents.PresenceFilter.call(this, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.filters.PresenceFilter.super_" id="apidoc.element.activedirectory.filters.PresenceFilter.super_">
+        function <span class="apidocSignatureSpan">activedirectory.filters.PresenceFilter.</span>super_
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function PresenceFilter(options) {
+  if (typeof (options) === 'object') {
+    assert.string(options.attribute, 'options.attribute');
+    this.attribute = options.attribute;
+  }
+
+
+  var self = this;
+  this.__defineGetter__('type', function () { return 'present'; });
+  this.__defineGetter__('json', function () {
+    return {
+      type: 'PresenceMatch',
+      attribute: self.attribute
+    };
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.activedirectory.filters.PresenceFilter.prototype" id="apidoc.module.activedirectory.filters.PresenceFilter.prototype">module activedirectory.filters.PresenceFilter.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.filters.PresenceFilter.prototype._toBer" id="apidoc.element.activedirectory.filters.PresenceFilter.prototype._toBer">
+        function <span class="apidocSignatureSpan">activedirectory.filters.PresenceFilter.prototype.</span>_toBer
+        <span class="apidocSignatureSpan">(ber)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_toBer = function (ber) {
+  assert.ok(ber);
+
+  for (var i = 0; i &lt; this.attribute.length; i++)
+    ber.writeByte(this.attribute.charCodeAt(i));
+
+  return ber;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.filters.PresenceFilter.prototype.parse" id="apidoc.element.activedirectory.filters.PresenceFilter.prototype.parse">
+        function <span class="apidocSignatureSpan">activedirectory.filters.PresenceFilter.prototype.</span>parse
+        <span class="apidocSignatureSpan">(ber)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">parse = function (ber) {
+  assert.ok(ber);
+
+  this.attribute =
+    ber.buffer.slice(0, ber.length).toString('utf8').toLowerCase();
+
+  ber._offset += ber.length;
+
+  return true;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.filters.PresenceFilter.prototype.toBer" id="apidoc.element.activedirectory.filters.PresenceFilter.prototype.toBer">
+        function <span class="apidocSignatureSpan">activedirectory.filters.PresenceFilter.prototype.</span>toBer
+        <span class="apidocSignatureSpan">(ber)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toBer(ber) {
+  if (!ber || !(ber instanceof BerWriter))
+    throw new TypeError('ber (BerWriter) required');
+
+  ber.startSequence(TYPES[this.type]);
+  ber = this._toBer(ber);
+  ber.endSequence();
+  return ber;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.activedirectory.filters.PresenceFilter.super_.prototype" id="apidoc.module.activedirectory.filters.PresenceFilter.super_.prototype">module activedirectory.filters.PresenceFilter.super_.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.filters.PresenceFilter.super_.prototype.matches" id="apidoc.element.activedirectory.filters.PresenceFilter.super_.prototype.matches">
+        function <span class="apidocSignatureSpan">activedirectory.filters.PresenceFilter.super_.prototype.</span>matches
+        <span class="apidocSignatureSpan">(target, strictAttrCase)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">matches = function (target, strictAttrCase) {
+  assert.object(target, 'target');
+
+  var value = helpers.getAttrValue(target, this.attribute, strictAttrCase);
+
+  return (value !== undefined &amp;&amp; value !== null);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.filters.PresenceFilter.super_.prototype.toString" id="apidoc.element.activedirectory.filters.PresenceFilter.super_.prototype.toString">
+        function <span class="apidocSignatureSpan">activedirectory.filters.PresenceFilter.super_.prototype.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+  return '(' + helpers.escape(this.attribute) + '=*)';
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.activedirectory.filters.SubstringFilter" id="apidoc.module.activedirectory.filters.SubstringFilter">module activedirectory.filters.SubstringFilter</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.filters.SubstringFilter.SubstringFilter" id="apidoc.element.activedirectory.filters.SubstringFilter.SubstringFilter">
+        function <span class="apidocSignatureSpan">activedirectory.filters.</span>SubstringFilter
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function SubstringFilter(options) {
+  parents.SubstringFilter.call(this, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.filters.SubstringFilter.super_" id="apidoc.element.activedirectory.filters.SubstringFilter.super_">
+        function <span class="apidocSignatureSpan">activedirectory.filters.SubstringFilter.</span>super_
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function SubstringFilter(options) {
+  if (typeof (options) === 'object') {
+    assert.string(options.attribute, 'options.attribute');
+
+    this.attribute = options.attribute;
+    this.initial = options.initial;
+    this.any = options.any ? options.any.slice(0) : [];
+    this.final = options.final;
+  } else {
+    this.any = [];
+  }
+
+  var self = this;
+  this.__defineGetter__('type', function () { return 'substring'; });
+  this.__defineGetter__('json', function () {
+    return {
+      type: 'SubstringMatch',
+      initial: self.initial,
+      any: self.any,
+      final: self.final
+    };
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.activedirectory.filters.SubstringFilter.prototype" id="apidoc.module.activedirectory.filters.SubstringFilter.prototype">module activedirectory.filters.SubstringFilter.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.filters.SubstringFilter.prototype._toBer" id="apidoc.element.activedirectory.filters.SubstringFilter.prototype._toBer">
+        function <span class="apidocSignatureSpan">activedirectory.filters.SubstringFilter.prototype.</span>_toBer
+        <span class="apidocSignatureSpan">(ber)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_toBer = function (ber) {
+  assert.ok(ber);
+
+  ber.writeString(this.attribute);
+  ber.startSequence();
+
+  if (this.initial)
+    ber.writeString(this.initial, 0x80);
+
+  if (this.any &amp;&amp; this.any.length)
+    this.any.forEach(function (s) {
+      ber.writeString(s, 0x81);
+    });
+
+  if (this.final)
+    ber.writeString(this.final, 0x82);
+
+  ber.endSequence();
+
+  return ber;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.filters.SubstringFilter.prototype.parse" id="apidoc.element.activedirectory.filters.SubstringFilter.prototype.parse">
+        function <span class="apidocSignatureSpan">activedirectory.filters.SubstringFilter.prototype.</span>parse
+        <span class="apidocSignatureSpan">(ber)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">parse = function (ber) {
+  assert.ok(ber);
+
+  this.attribute = ber.readString().toLowerCase();
+  ber.readSequence();
+  var end = ber.offset + ber.length;
+
+  while (ber.offset &lt; end) {
+    var tag = ber.peek();
+    switch (tag) {
+    case 0x80: // Initial
+      this.initial = ber.readString(tag);
+      if (this.attribute === 'objectclass')
+        this.initial = this.initial.toLowerCase();
+      break;
+    case 0x81: // Any
+      var anyVal = ber.readString(tag);
+      if (this.attribute === 'objectclass')
+        anyVal = anyVal.toLowerCase();
+      this.any.push(anyVal);
+      break;
+    case 0x82: // Final
+      this.final = ber.readString(tag);
+      if (this.attribute === 'objectclass')
+        this.final = this.final.toLowerCase();
+      break;
+    default:
+      throw new Error('Invalid substrings filter type: 0x' + tag.toString(16));
+    }
+  }
+
+  return true;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.filters.SubstringFilter.prototype.toBer" id="apidoc.element.activedirectory.filters.SubstringFilter.prototype.toBer">
+        function <span class="apidocSignatureSpan">activedirectory.filters.SubstringFilter.prototype.</span>toBer
+        <span class="apidocSignatureSpan">(ber)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toBer(ber) {
+  if (!ber || !(ber instanceof BerWriter))
+    throw new TypeError('ber (BerWriter) required');
+
+  ber.startSequence(TYPES[this.type]);
+  ber = this._toBer(ber);
+  ber.endSequence();
+  return ber;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.activedirectory.filters.SubstringFilter.super_.prototype" id="apidoc.module.activedirectory.filters.SubstringFilter.super_.prototype">module activedirectory.filters.SubstringFilter.super_.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.filters.SubstringFilter.super_.prototype.matches" id="apidoc.element.activedirectory.filters.SubstringFilter.super_.prototype.matches">
+        function <span class="apidocSignatureSpan">activedirectory.filters.SubstringFilter.super_.prototype.</span>matches
+        <span class="apidocSignatureSpan">(target, strictAttrCase)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">matches = function (target, strictAttrCase) {
+  assert.object(target, 'target');
+
+  var tv = helpers.getAttrValue(target, this.attribute, strictAttrCase);
+
+  if (tv !== undefined &amp;&amp; tv !== null) {
+    var re = '';
+
+    if (this.initial)
+      re += '^' + escapeRegExp(this.initial) + '.*';
+    this.any.forEach(function (s) {
+      re += escapeRegExp(s) + '.*';
+    });
+    if (this.final)
+      re += escapeRegExp(this.final) + '$';
+
+    var matcher = new RegExp(re);
+    return helpers.testValues(function (v) {
+      return matcher.test(v);
+    }, tv);
+  }
+
+  return false;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.activedirectory.filters.SubstringFilter.super_.prototype.toString" id="apidoc.element.activedirectory.filters.SubstringFilter.super_.prototype.toString">
+        function <span class="apidocSignatureSpan">activedirectory.filters.SubstringFilter.super_.prototype.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+  var str = '(' + helpers.escape(this.attribute) + '=';
+
+  if (this.initial)
+    str += helpers.escape(this.initial);
+
+  str += '*';
+
+  this.any.forEach(function (s) {
+    str += helpers.escape(s) + '*';
+  });
+
+  if (this.final)
+    str += helpers.escape(this.final);
+
+  str += ')';
+
+  return str;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
