@@ -1,4 +1,4 @@
-<div class="apidocDiv">
+<html><head></head><body><div class="apidocDiv">
 <style>
 /*csslint
 */
@@ -47,17 +47,10 @@
 }
 </style>
 <h1>api documentation for
-    <a
-
-        href="https://github.com/gheeres/node-activedirectory#readme"
-
-    >activedirectory (v0.7.2)</a>
+    <a href="https://github.com/gheeres/node-activedirectory#readme">activedirectory (v0.7.2)</a>
 </h1>
 <h4>ActiveDirectory is an ldapjs client for authN (authentication) and authZ (authorization) for Microsoft Active Directory with range retrieval support for large Active Directory installations.</h4>
-<div class="apidocSectionDiv"><a
-    href="#apidoc.tableOfContents"
-    id="apidoc.tableOfContents"
-><h1>table of contents</h1></a><ol>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.activedirectory">module activedirectory</a><ol>
 
@@ -1897,13 +1890,13 @@
     <li>description and source-code<pre class="apidocCodePre">activedirectory = function (url, baseDN, username, password, defaults) {
   if (this instanceof ActiveDirectory) {
     this.opts = {};
-    if (typeof(url) === &#x27;string&#x27;) {
+    if (typeof(url) === 'string') {
       this.opts.url = url;
       this.baseDN = baseDN;
       this.opts.bindDN = username;
       this.opts.bindCredentials = password;
 
-      if (typeof((defaults || {}).entryParser) === &#x27;function&#x27;) {
+      if (typeof((defaults || {}).entryParser) === 'function') {
         this.opts.entryParser = defaults.entryParser;
       }
     }
@@ -1923,16 +1916,16 @@
     defaultAttributes = _.extend({}, originalDefaultAttributes, (this.opts || {}).attributes || {}, (defaults || {}).attributes || {});
     defaultReferrals = _.extend({}, originalDefaultReferrals, (this.opts || {}).referrals || {}, (defaults || {}).referrals  || {});
 
-    log.info(&#x27;Using username/password (%s/%s) to bind to ActiveDirectory (%s).&#x27;, this.opts.bindDN,
-             isPasswordLoggingEnabled ? this.opts.bindCredentials : &#x27;********&#x27;, this.opts.url);
-    log.info(&#x27;Referrals are %s&#x27;, defaultReferrals.enabled ? &#x27;enabled. Exclusions: &#x27;+JSON.stringify(defaultReferrals.exclude): &#x27;disabled
-&#x27;);
-    log.info(&#x27;Default user attributes: %j&#x27;, defaultAttributes.user || []);
-    log.info(&#x27;Default group attributes: %j&#x27;, defaultAttributes.group || []);
+    log.info('Using username/password (%s/%s) to bind to ActiveDirectory (%s).', this.opts.bindDN,
+             isPasswordLoggingEnabled ? this.opts.bindCredentials : '********', this.opts.url);
+    log.info('Referrals are %s', defaultReferrals.enabled ? 'enabled. Exclusions: '+JSON.stringify(defaultReferrals.exclude): 'disabled
+');
+    log.info('Default user attributes: %j', defaultAttributes.user || []);
+    log.info('Default group attributes: %j', defaultAttributes.group || []);
 
     // Enable connection pooling
-    // TODO: To be disabled / removed in future release of ldapjs &#x3e; 0.7.1
-    if (typeof(this.opts.maxConnections) === &#x27;undefined&#x27;) {
+    // TODO: To be disabled / removed in future release of ldapjs &gt; 0.7.1
+    if (typeof(this.opts.maxConnections) === 'undefined') {
       this.opts.maxConnections = 20;
     }
     events.EventEmitter.call(this);
@@ -1991,7 +1984,7 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function toBer(ber) {
   if (!ber || !(ber instanceof BerWriter))
-    throw new TypeError(&#x27;ber (BerWriter) required&#x27;);
+    throw new TypeError('ber (BerWriter) required');
 
   ber.startSequence(TYPES[this.type]);
   ber = this._toBer(ber);
@@ -2067,7 +2060,7 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function toBer(ber) {
   if (!ber || !(ber instanceof BerWriter))
-    throw new TypeError(&#x27;ber (BerWriter) required&#x27;);
+    throw new TypeError('ber (BerWriter) required');
 
   ber.startSequence(TYPES[this.type]);
   ber = this._toBer(ber);
@@ -2122,12 +2115,12 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">filters.EqualityFilter.prototype.matches = function (target, strictAttrCase) {
-  assert.object(target, &#x27;target&#x27;);
+  assert.object(target, 'target');
 
   var tv = parents.getAttrValue(target, this.attribute, strictAttrCase);
   var value = this.value;
 
-  if (this.attribute.toLowerCase() === &#x27;objectclass&#x27;) {
+  if (this.attribute.toLowerCase() === 'objectclass') {
 <span class="apidocCodeCommentSpan">    /*
      * Perform case-insensitive match for objectClass since nearly every LDAP
      * implementation behaves in this manner.
@@ -2160,7 +2153,7 @@
   this.attribute = ber.readString().toLowerCase();
   this.value = ber.readString(ASN1.OctetString, true);
 
-  if (this.attribute === &#x27;objectclass&#x27;)
+  if (this.attribute === 'objectclass')
     this.value = this.value.toLowerCase();
 
   return true;
@@ -2179,7 +2172,7 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function toBer(ber) {
   if (!ber || !(ber instanceof BerWriter))
-    throw new TypeError(&#x27;ber (BerWriter) required&#x27;);
+    throw new TypeError('ber (BerWriter) required');
 
   ber.startSequence(TYPES[this.type]);
   ber = this._toBer(ber);
@@ -2241,7 +2234,7 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">filters.ExtensibleFilter.prototype.parse = function (ber) {
   var end = ber.offset + ber.length;
-  while (ber.offset &#x3c; end) {
+  while (ber.offset &lt; end) {
     var tag = ber.peek();
     switch (tag) {
     case 0x81:
@@ -2257,7 +2250,7 @@
       this.dnAttributes = ber.readBoolean(tag);
       break;
     default:
-      throw new Error(&#x27;Invalid ext_match filter type: 0x&#x27; + tag.toString(16));
+      throw new Error('Invalid ext_match filter type: 0x' + tag.toString(16));
     }
   }
 
@@ -2277,7 +2270,7 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function toBer(ber) {
   if (!ber || !(ber instanceof BerWriter))
-    throw new TypeError(&#x27;ber (BerWriter) required&#x27;);
+    throw new TypeError('ber (BerWriter) required');
 
   ber.startSequence(TYPES[this.type]);
   ber = this._toBer(ber);
@@ -2353,7 +2346,7 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function toBer(ber) {
   if (!ber || !(ber instanceof BerWriter))
-    throw new TypeError(&#x27;ber (BerWriter) required&#x27;);
+    throw new TypeError('ber (BerWriter) required');
 
   ber.startSequence(TYPES[this.type]);
   ber = this._toBer(ber);
@@ -2429,7 +2422,7 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function toBer(ber) {
   if (!ber || !(ber instanceof BerWriter))
-    throw new TypeError(&#x27;ber (BerWriter) required&#x27;);
+    throw new TypeError('ber (BerWriter) required');
 
   ber.startSequence(TYPES[this.type]);
   ber = this._toBer(ber);
@@ -2482,7 +2475,7 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function toBer(ber) {
   if (!ber || !(ber instanceof BerWriter))
-    throw new TypeError(&#x27;ber (BerWriter) required&#x27;);
+    throw new TypeError('ber (BerWriter) required');
 
   ber.startSequence(TYPES[this.type]);
   ber = this._toBer(ber);
@@ -2539,7 +2532,7 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function toBer(ber) {
   if (!ber || !(ber instanceof BerWriter))
-    throw new TypeError(&#x27;ber (BerWriter) required&#x27;);
+    throw new TypeError('ber (BerWriter) required');
 
   ber.startSequence(TYPES[this.type]);
   ber = this._toBer(ber);
@@ -2576,7 +2569,7 @@
     <li>description and source-code<pre class="apidocCodePre">filters.PresenceFilter.prototype._toBer = function (ber) {
   assert.ok(ber);
 
-  for (var i = 0; i &#x3c; this.attribute.length; i++)
+  for (var i = 0; i &lt; this.attribute.length; i++)
     ber.writeByte(this.attribute.charCodeAt(i));
 
   return ber;
@@ -2597,7 +2590,7 @@
   assert.ok(ber);
 
   this.attribute =
-    ber.buffer.slice(0, ber.length).toString(&#x27;utf8&#x27;).toLowerCase();
+    ber.buffer.slice(0, ber.length).toString('utf8').toLowerCase();
 
   ber._offset += ber.length;
 
@@ -2617,7 +2610,7 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function toBer(ber) {
   if (!ber || !(ber instanceof BerWriter))
-    throw new TypeError(&#x27;ber (BerWriter) required&#x27;);
+    throw new TypeError('ber (BerWriter) required');
 
   ber.startSequence(TYPES[this.type]);
   ber = this._toBer(ber);
@@ -2660,7 +2653,7 @@
   if (this.initial)
     ber.writeString(this.initial, 0x80);
 
-  if (this.any &#x26;&#x26; this.any.length)
+  if (this.any &amp;&amp; this.any.length)
     this.any.forEach(function (s) {
       ber.writeString(s, 0x81);
     });
@@ -2691,27 +2684,27 @@
   ber.readSequence();
   var end = ber.offset + ber.length;
 
-  while (ber.offset &#x3c; end) {
+  while (ber.offset &lt; end) {
     var tag = ber.peek();
     switch (tag) {
     case 0x80: // Initial
       this.initial = ber.readString(tag);
-      if (this.attribute === &#x27;objectclass&#x27;)
+      if (this.attribute === 'objectclass')
         this.initial = this.initial.toLowerCase();
       break;
     case 0x81: // Any
       var anyVal = ber.readString(tag);
-      if (this.attribute === &#x27;objectclass&#x27;)
+      if (this.attribute === 'objectclass')
         anyVal = anyVal.toLowerCase();
       this.any.push(anyVal);
       break;
     case 0x82: // Final
       this.final = ber.readString(tag);
-      if (this.attribute === &#x27;objectclass&#x27;)
+      if (this.attribute === 'objectclass')
         this.final = this.final.toLowerCase();
       break;
     default:
-      throw new Error(&#x27;Invalid substrings filter type: 0x&#x27; + tag.toString(16));
+      throw new Error('Invalid substrings filter type: 0x' + tag.toString(16));
     }
   }
 
@@ -2731,7 +2724,7 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function toBer(ber) {
   if (!ber || !(ber instanceof BerWriter))
-    throw new TypeError(&#x27;ber (BerWriter) required&#x27;);
+    throw new TypeError('ber (BerWriter) required');
 
   ber.startSequence(TYPES[this.type]);
   ber = this._toBer(ber);
@@ -2751,12 +2744,12 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function isFilter(filter) {
-  if (!filter || typeof (filter) !== &#x27;object&#x27;) {
+  if (!filter || typeof (filter) !== 'object') {
     return false;
   }
   // Do our best to duck-type it
-  if (typeof (filter.toBer) === &#x27;function&#x27; &#x26;&#x26;
-      typeof (filter.matches) === &#x27;function&#x27; &#x26;&#x26;
+  if (typeof (filter.toBer) === 'function' &amp;&amp;
+      typeof (filter.matches) === 'function' &amp;&amp;
       TYPES[filter.type] !== undefined) {
     return true;
   }
@@ -2776,7 +2769,7 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">filters.parse = function (ber) {
   if (!ber || !(ber instanceof BerReader))
-    throw new TypeError(&#x27;ber (BerReader) required&#x27;);
+    throw new TypeError('ber (BerReader) required');
 
   return _parse(ber);
 }</pre></li>
@@ -3038,12 +3031,12 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function isFilter(filter) {
-  if (!filter || typeof (filter) !== &#x27;object&#x27;) {
+  if (!filter || typeof (filter) !== 'object') {
     return false;
   }
   // Do our best to duck-type it
-  if (typeof (filter.toBer) === &#x27;function&#x27; &#x26;&#x26;
-      typeof (filter.matches) === &#x27;function&#x27; &#x26;&#x26;
+  if (typeof (filter.toBer) === 'function' &amp;&amp;
+      typeof (filter.matches) === 'function' &amp;&amp;
       TYPES[filter.type] !== undefined) {
     return true;
   }
@@ -3063,7 +3056,7 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">parse = function (ber) {
   if (!ber || !(ber instanceof BerReader))
-    throw new TypeError(&#x27;ber (BerReader) required&#x27;);
+    throw new TypeError('ber (BerReader) required');
 
   return _parse(ber);
 }</pre></li>
@@ -3118,19 +3111,19 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function AndFilter(options) {
-  if (typeof (options) === &#x27;object&#x27;) {
-    assert.arrayOfObject(options.filters, &#x27;options.filters&#x27;);
+  if (typeof (options) === 'object') {
+    assert.arrayOfObject(options.filters, 'options.filters');
   } else {
     options = {};
   }
 
-  this.__defineGetter__(&#x27;type&#x27;, function () { return &#x27;and&#x27;; });
+  this.__defineGetter__('type', function () { return 'and'; });
   this.filters = options.filters ? options.filters.slice() : [];
 
   var self = this;
-  this.__defineGetter__(&#x27;json&#x27;, function () {
+  this.__defineGetter__('json', function () {
     return {
-      type: &#x27;And&#x27;,
+      type: 'And',
       filters: self.filters
     };
   });
@@ -3175,7 +3168,7 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function toBer(ber) {
   if (!ber || !(ber instanceof BerWriter))
-    throw new TypeError(&#x27;ber (BerWriter) required&#x27;);
+    throw new TypeError('ber (BerWriter) required');
 
   ber.startSequence(TYPES[this.type]);
   ber = this._toBer(ber);
@@ -3227,7 +3220,7 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function toBer(ber) {
   if (!ber || !(ber instanceof BerWriter))
-    throw new TypeError(&#x27;ber (BerWriter) required&#x27;);
+    throw new TypeError('ber (BerWriter) required');
 
   ber.startSequence(TYPES[this.type]);
   ber = this._toBer(ber);
@@ -3252,7 +3245,7 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">addFilter = function (filter) {
-  assert.object(filter, &#x27;filter&#x27;);
+  assert.object(filter, 'filter');
 
   this.filters.push(filter);
 }</pre></li>
@@ -3269,14 +3262,14 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">matches = function (target, strictAttrCase) {
-  assert.object(target, &#x27;target&#x27;);
+  assert.object(target, 'target');
 
   if (this.filters.length === 0) {
 <span class="apidocCodeCommentSpan">    /* true per RFC4526 */
 </span>    return true;
   }
 
-  for (var i = 0; i &#x3c; this.filters.length; i++) {
+  for (var i = 0; i &lt; this.filters.length; i++) {
     if (!this.filters[i].matches(target, strictAttrCase))
       return false;
   }
@@ -3296,11 +3289,11 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">toString = function () {
-  var str = &#x27;(&#x26;&#x27;;
+  var str = '(&amp;';
   this.filters.forEach(function (f) {
     str += f.toString();
   });
-  str += &#x27;)&#x27;;
+  str += ')';
 
   return str;
 }</pre></li>
@@ -3337,18 +3330,18 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function ApproximateFilter(options) {
-  if (typeof (options) === &#x27;object&#x27;) {
-    assert.string(options.attribute, &#x27;options.attribute&#x27;);
-    assert.string(options.value, &#x27;options.value&#x27;);
+  if (typeof (options) === 'object') {
+    assert.string(options.attribute, 'options.attribute');
+    assert.string(options.value, 'options.value');
     this.attribute = options.attribute;
     this.value = options.value;
   }
 
   var self = this;
-  this.__defineGetter__(&#x27;type&#x27;, function () { return &#x27;approx&#x27;; });
-  this.__defineGetter__(&#x27;json&#x27;, function () {
+  this.__defineGetter__('type', function () { return 'approx'; });
+  this.__defineGetter__('json', function () {
     return {
-      type: &#x27;ApproximateMatch&#x27;,
+      type: 'ApproximateMatch',
       attribute: self.attribute,
       value: self.value
     };
@@ -3413,7 +3406,7 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function toBer(ber) {
   if (!ber || !(ber instanceof BerWriter))
-    throw new TypeError(&#x27;ber (BerWriter) required&#x27;);
+    throw new TypeError('ber (BerWriter) required');
 
   ber.startSequence(TYPES[this.type]);
   ber = this._toBer(ber);
@@ -3489,7 +3482,7 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function toBer(ber) {
   if (!ber || !(ber instanceof BerWriter))
-    throw new TypeError(&#x27;ber (BerWriter) required&#x27;);
+    throw new TypeError('ber (BerWriter) required');
 
   ber.startSequence(TYPES[this.type]);
   ber = this._toBer(ber);
@@ -3515,7 +3508,7 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">matches = function () {
   // Consumers must implement this themselves
-  throw new Error(&#x27;approx match implementation missing&#x27;);
+  throw new Error('approx match implementation missing');
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -3530,8 +3523,8 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">toString = function () {
-  return (&#x27;(&#x27; + helpers.escape(this.attribute) +
-          &#x27;~=&#x27; + helpers.escape(this.value) + &#x27;)&#x27;);
+  return ('(' + helpers.escape(this.attribute) +
+          '~=' + helpers.escape(this.value) + ')');
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -3566,8 +3559,8 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function EqualityFilter(options) {
-  if (typeof (options) === &#x27;object&#x27;) {
-    assert.string(options.attribute, &#x27;options.attribute&#x27;);
+  if (typeof (options) === 'object') {
+    assert.string(options.attribute, 'options.attribute');
     this.attribute = options.attribute;
     // Prefer Buffers over strings to make filter cloning easier
     if (options.raw) {
@@ -3580,12 +3573,12 @@
   }
 
   var self = this;
-  this.__defineGetter__(&#x27;type&#x27;, function () { return &#x27;equal&#x27;; });
-  this.__defineGetter__(&#x27;value&#x27;, function () {
+  this.__defineGetter__('type', function () { return 'equal'; });
+  this.__defineGetter__('value', function () {
     return (Buffer.isBuffer(self.raw)) ? self.raw.toString() : self.raw;
   });
-  this.__defineSetter__(&#x27;value&#x27;, function (data) {
-    if (typeof (data) === &#x27;string&#x27;) {
+  this.__defineSetter__('value', function (data) {
+    if (typeof (data) === 'string') {
       self.raw = new Buffer(data);
     } else if (Buffer.isBuffer(data)) {
       self.raw = new Buffer(data.length);
@@ -3594,9 +3587,9 @@
       self.raw = data;
     }
   });
-  this.__defineGetter__(&#x27;json&#x27;, function () {
+  this.__defineGetter__('json', function () {
     return {
-      type: &#x27;EqualityMatch&#x27;,
+      type: 'EqualityMatch',
       attribute: self.attribute,
       value: self.value
     };
@@ -3640,12 +3633,12 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">matches = function (target, strictAttrCase) {
-  assert.object(target, &#x27;target&#x27;);
+  assert.object(target, 'target');
 
   var tv = parents.getAttrValue(target, this.attribute, strictAttrCase);
   var value = this.value;
 
-  if (this.attribute.toLowerCase() === &#x27;objectclass&#x27;) {
+  if (this.attribute.toLowerCase() === 'objectclass') {
 <span class="apidocCodeCommentSpan">    /*
      * Perform case-insensitive match for objectClass since nearly every LDAP
      * implementation behaves in this manner.
@@ -3678,7 +3671,7 @@
   this.attribute = ber.readString().toLowerCase();
   this.value = ber.readString(ASN1.OctetString, true);
 
-  if (this.attribute === &#x27;objectclass&#x27;)
+  if (this.attribute === 'objectclass')
     this.value = this.value.toLowerCase();
 
   return true;
@@ -3697,7 +3690,7 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function toBer(ber) {
   if (!ber || !(ber instanceof BerWriter))
-    throw new TypeError(&#x27;ber (BerWriter) required&#x27;);
+    throw new TypeError('ber (BerWriter) required');
 
   ber.startSequence(TYPES[this.type]);
   ber = this._toBer(ber);
@@ -3747,12 +3740,12 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">matches = function (target, strictAttrCase) {
-  assert.object(target, &#x27;target&#x27;);
+  assert.object(target, 'target');
 
   var tv = parents.getAttrValue(target, this.attribute, strictAttrCase);
   var value = this.value;
 
-  if (this.attribute.toLowerCase() === &#x27;objectclass&#x27;) {
+  if (this.attribute.toLowerCase() === 'objectclass') {
 <span class="apidocCodeCommentSpan">    /*
      * Perform case-insensitive match for objectClass since nearly every LDAP
      * implementation behaves in this manner.
@@ -3790,7 +3783,7 @@
   this.attribute = ber.readString().toLowerCase();
   this.value = ber.readString(ASN1.OctetString, true);
 
-  if (this.attribute === &#x27;objectclass&#x27;)
+  if (this.attribute === 'objectclass')
     this.value = this.value.toLowerCase();
 
   return true;
@@ -3814,7 +3807,7 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function toBer(ber) {
   if (!ber || !(ber instanceof BerWriter))
-    throw new TypeError(&#x27;ber (BerWriter) required&#x27;);
+    throw new TypeError('ber (BerWriter) required');
 
   ber.startSequence(TYPES[this.type]);
   ber = this._toBer(ber);
@@ -3839,7 +3832,7 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">matches = function (target, strictAttrCase) {
-  assert.object(target, &#x27;target&#x27;);
+  assert.object(target, 'target');
 
   var tv = helpers.getAttrValue(target, this.attribute, strictAttrCase);
   var value = this.value;
@@ -3861,8 +3854,8 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">toString = function () {
-  return (&#x27;(&#x27; + helpers.escape(this.attribute) +
-          &#x27;=&#x27; + helpers.escape(this.value) + &#x27;)&#x27;);
+  return ('(' + helpers.escape(this.attribute) +
+          '=' + helpers.escape(this.value) + ')');
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -3897,11 +3890,11 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function ExtensibleFilter(options) {
-  if (typeof (options) === &#x27;object&#x27;) {
-    assert.optionalString(options.rule, &#x27;options.rule&#x27;);
-    assert.optionalString(options.matchType, &#x27;options.matchType&#x27;);
-    assert.optionalString(options.attribute, &#x27;options.attribute&#x27;);
-    assert.optionalString(options.value, &#x27;options.value&#x27;);
+  if (typeof (options) === 'object') {
+    assert.optionalString(options.rule, 'options.rule');
+    assert.optionalString(options.matchType, 'options.matchType');
+    assert.optionalString(options.attribute, 'options.attribute');
+    assert.optionalString(options.value, 'options.value');
   } else {
     options = {};
   }
@@ -3913,29 +3906,29 @@
   }
   this.dnAttributes = options.dnAttributes || false;
   this.rule = options.rule;
-  this.value = (options.value !== undefined) ? options.value : &#x27;&#x27;;
+  this.value = (options.value !== undefined) ? options.value : '';
 
   var self = this;
-  this.__defineGetter__(&#x27;type&#x27;, function () { return &#x27;ext&#x27;; });
-  this.__defineGetter__(&#x27;json&#x27;, function () {
+  this.__defineGetter__('type', function () { return 'ext'; });
+  this.__defineGetter__('json', function () {
     return {
-      type: &#x27;ExtensibleMatch&#x27;,
+      type: 'ExtensibleMatch',
       matchRule: self.rule,
       matchType: self.matchType,
       matchValue: self.value,
       dnAttributes: self.dnAttributes
     };
   });
-  this.__defineGetter__(&#x27;matchingRule&#x27;, function () {
+  this.__defineGetter__('matchingRule', function () {
     return self.rule;
   });
-  this.__defineGetter__(&#x27;matchValue&#x27;, function () {
+  this.__defineGetter__('matchValue', function () {
     return self.value;
   });
-  this.__defineGetter__(&#x27;attribute&#x27;, function () {
+  this.__defineGetter__('attribute', function () {
     return this.matchType;
   });
-  this.__defineSetter__(&#x27;attribute&#x27;, function (value) {
+  this.__defineSetter__('attribute', function (value) {
     this.matchType = value;
   });
 
@@ -3985,7 +3978,7 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">parse = function (ber) {
   var end = ber.offset + ber.length;
-  while (ber.offset &#x3c; end) {
+  while (ber.offset &lt; end) {
     var tag = ber.peek();
     switch (tag) {
     case 0x81:
@@ -4001,7 +3994,7 @@
       this.dnAttributes = ber.readBoolean(tag);
       break;
     default:
-      throw new Error(&#x27;Invalid ext_match filter type: 0x&#x27; + tag.toString(16));
+      throw new Error('Invalid ext_match filter type: 0x' + tag.toString(16));
     }
   }
 
@@ -4021,7 +4014,7 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function toBer(ber) {
   if (!ber || !(ber instanceof BerWriter))
-    throw new TypeError(&#x27;ber (BerWriter) required&#x27;);
+    throw new TypeError('ber (BerWriter) required');
 
   ber.startSequence(TYPES[this.type]);
   ber = this._toBer(ber);
@@ -4078,7 +4071,7 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">parse = function (ber) {
   var end = ber.offset + ber.length;
-  while (ber.offset &#x3c; end) {
+  while (ber.offset &lt; end) {
     var tag = ber.peek();
     switch (tag) {
     case 0x81:
@@ -4094,7 +4087,7 @@
       this.dnAttributes = ber.readBoolean(tag);
       break;
     default:
-      throw new Error(&#x27;Invalid ext_match filter type: 0x&#x27; + tag.toString(16));
+      throw new Error('Invalid ext_match filter type: 0x' + tag.toString(16));
     }
   }
 
@@ -4119,7 +4112,7 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function toBer(ber) {
   if (!ber || !(ber instanceof BerWriter))
-    throw new TypeError(&#x27;ber (BerWriter) required&#x27;);
+    throw new TypeError('ber (BerWriter) required');
 
   ber.startSequence(TYPES[this.type]);
   ber = this._toBer(ber);
@@ -4145,7 +4138,7 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">matches = function () {
   // Consumers must implement this themselves
-  throw new Error(&#x27;ext match implementation missing&#x27;);
+  throw new Error('ext match implementation missing');
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -4160,20 +4153,20 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">toString = function () {
-  var str = &#x27;(&#x27;;
+  var str = '(';
 
   if (this.matchType)
     str += this.matchType;
 
-  str += &#x27;:&#x27;;
+  str += ':';
 
   if (this.dnAttributes)
-    str += &#x27;dn:&#x27;;
+    str += 'dn:';
 
   if (this.rule)
-    str += this.rule + &#x27;:&#x27;;
+    str += this.rule + ':';
 
-  return (str + &#x27;=&#x27; + this.value + &#x27;)&#x27;);
+  return (str + '=' + this.value + ')');
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -4208,18 +4201,18 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function GreaterThanEqualsFilter(options) {
-  if (typeof (options) === &#x27;object&#x27;) {
-    assert.string(options.attribute, &#x27;options.attribute&#x27;);
-    assert.string(options.value, &#x27;options.value&#x27;);
+  if (typeof (options) === 'object') {
+    assert.string(options.attribute, 'options.attribute');
+    assert.string(options.value, 'options.value');
     this.attribute = options.attribute;
     this.value = options.value;
   }
 
   var self = this;
-  this.__defineGetter__(&#x27;type&#x27;, function () { return &#x27;ge&#x27;; });
-  this.__defineGetter__(&#x27;json&#x27;, function () {
+  this.__defineGetter__('type', function () { return 'ge'; });
+  this.__defineGetter__('json', function () {
     return {
-      type: &#x27;GreaterThanEqualsMatch&#x27;,
+      type: 'GreaterThanEqualsMatch',
       attribute: self.attribute,
       value: self.value
     };
@@ -4284,7 +4277,7 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function toBer(ber) {
   if (!ber || !(ber instanceof BerWriter))
-    throw new TypeError(&#x27;ber (BerWriter) required&#x27;);
+    throw new TypeError('ber (BerWriter) required');
 
   ber.startSequence(TYPES[this.type]);
   ber = this._toBer(ber);
@@ -4360,7 +4353,7 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function toBer(ber) {
   if (!ber || !(ber instanceof BerWriter))
-    throw new TypeError(&#x27;ber (BerWriter) required&#x27;);
+    throw new TypeError('ber (BerWriter) required');
 
   ber.startSequence(TYPES[this.type]);
   ber = this._toBer(ber);
@@ -4385,13 +4378,13 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">matches = function (target, strictAttrCase) {
-  assert.object(target, &#x27;target&#x27;);
+  assert.object(target, 'target');
 
   var tv = helpers.getAttrValue(target, this.attribute, strictAttrCase);
   var value = this.value;
 
   return helpers.testValues(function (v) {
-    return value &#x3c;= v;
+    return value &lt;= v;
   }, tv);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -4407,8 +4400,8 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">toString = function () {
-  return (&#x27;(&#x27; + helpers.escape(this.attribute) +
-          &#x27;&#x3e;=&#x27; + helpers.escape(this.value) + &#x27;)&#x27;);
+  return ('(' + helpers.escape(this.attribute) +
+          '&gt;=' + helpers.escape(this.value) + ')');
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -4443,18 +4436,18 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function LessThanEqualsFilter(options) {
-  if (typeof (options) === &#x27;object&#x27;) {
-    assert.string(options.attribute, &#x27;options.attribute&#x27;);
-    assert.string(options.value, &#x27;options.attribute&#x27;);
+  if (typeof (options) === 'object') {
+    assert.string(options.attribute, 'options.attribute');
+    assert.string(options.value, 'options.attribute');
     this.attribute = options.attribute;
     this.value = options.value;
   }
 
   var self = this;
-  this.__defineGetter__(&#x27;type&#x27;, function () { return &#x27;le&#x27;; });
-  this.__defineGetter__(&#x27;json&#x27;, function () {
+  this.__defineGetter__('type', function () { return 'le'; });
+  this.__defineGetter__('json', function () {
     return {
-      type: &#x27;LessThanEqualsMatch&#x27;,
+      type: 'LessThanEqualsMatch',
       attribute: self.attribute,
       value: self.value
     };
@@ -4519,7 +4512,7 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function toBer(ber) {
   if (!ber || !(ber instanceof BerWriter))
-    throw new TypeError(&#x27;ber (BerWriter) required&#x27;);
+    throw new TypeError('ber (BerWriter) required');
 
   ber.startSequence(TYPES[this.type]);
   ber = this._toBer(ber);
@@ -4595,7 +4588,7 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function toBer(ber) {
   if (!ber || !(ber instanceof BerWriter))
-    throw new TypeError(&#x27;ber (BerWriter) required&#x27;);
+    throw new TypeError('ber (BerWriter) required');
 
   ber.startSequence(TYPES[this.type]);
   ber = this._toBer(ber);
@@ -4620,13 +4613,13 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">matches = function (target, strictAttrCase) {
-  assert.object(target, &#x27;target&#x27;);
+  assert.object(target, 'target');
 
   var tv = helpers.getAttrValue(target, this.attribute, strictAttrCase);
   var value = this.value;
 
   return helpers.testValues(function (v) {
-    return value &#x3e;= v;
+    return value &gt;= v;
   }, tv);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -4642,8 +4635,8 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">toString = function () {
-  return (&#x27;(&#x27; + helpers.escape(this.attribute) +
-          &#x27;&#x3c;=&#x27; + helpers.escape(this.value) + &#x27;)&#x27;);
+  return ('(' + helpers.escape(this.attribute) +
+          '&lt;=' + helpers.escape(this.value) + ')');
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -4678,8 +4671,8 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function NotFilter(options) {
-  if (typeof (options) === &#x27;object&#x27;) {
-    assert.object(options.filter, &#x27;options.filter&#x27;);
+  if (typeof (options) === 'object') {
+    assert.object(options.filter, 'options.filter');
   } else {
     options = {};
   }
@@ -4687,10 +4680,10 @@
   this.filter = options.filter || {};
 
   var self = this;
-  this.__defineGetter__(&#x27;type&#x27;, function () { return &#x27;not&#x27;; });
-  this.__defineGetter__(&#x27;json&#x27;, function () {
+  this.__defineGetter__('type', function () { return 'not'; });
+  this.__defineGetter__('json', function () {
     return {
-      type: &#x27;Not&#x27;,
+      type: 'Not',
       filter: self.filter
     };
   });
@@ -4731,7 +4724,7 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function toBer(ber) {
   if (!ber || !(ber instanceof BerWriter))
-    throw new TypeError(&#x27;ber (BerWriter) required&#x27;);
+    throw new TypeError('ber (BerWriter) required');
 
   ber.startSequence(TYPES[this.type]);
   ber = this._toBer(ber);
@@ -4779,7 +4772,7 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function toBer(ber) {
   if (!ber || !(ber instanceof BerWriter))
-    throw new TypeError(&#x27;ber (BerWriter) required&#x27;);
+    throw new TypeError('ber (BerWriter) required');
 
   ber.startSequence(TYPES[this.type]);
   ber = this._toBer(ber);
@@ -4804,7 +4797,7 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">addFilter = function (filter) {
-  assert.object(filter, &#x27;filter&#x27;);
+  assert.object(filter, 'filter');
   this.filter = filter;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -4835,7 +4828,7 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">toString = function () {
-  return &#x27;(!&#x27; + this.filter.toString() + &#x27;)&#x27;;
+  return '(!' + this.filter.toString() + ')';
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -4870,8 +4863,8 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function OrFilter(options) {
-  if (typeof (options) === &#x27;object&#x27;) {
-    assert.arrayOfObject(options.filters, &#x27;options.filters&#x27;);
+  if (typeof (options) === 'object') {
+    assert.arrayOfObject(options.filters, 'options.filters');
   } else {
     options = {};
   }
@@ -4879,10 +4872,10 @@
   this.filters = options.filters ? options.filters.slice() : [];
 
   var self = this;
-  this.__defineGetter__(&#x27;type&#x27;, function () { return &#x27;or&#x27;; });
-  this.__defineGetter__(&#x27;json&#x27;, function () {
+  this.__defineGetter__('type', function () { return 'or'; });
+  this.__defineGetter__('json', function () {
     return {
-      type: &#x27;Or&#x27;,
+      type: 'Or',
       filters: self.filters
     };
   });
@@ -4927,7 +4920,7 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function toBer(ber) {
   if (!ber || !(ber instanceof BerWriter))
-    throw new TypeError(&#x27;ber (BerWriter) required&#x27;);
+    throw new TypeError('ber (BerWriter) required');
 
   ber.startSequence(TYPES[this.type]);
   ber = this._toBer(ber);
@@ -4979,7 +4972,7 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function toBer(ber) {
   if (!ber || !(ber instanceof BerWriter))
-    throw new TypeError(&#x27;ber (BerWriter) required&#x27;);
+    throw new TypeError('ber (BerWriter) required');
 
   ber.startSequence(TYPES[this.type]);
   ber = this._toBer(ber);
@@ -5004,7 +4997,7 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">addFilter = function (filter) {
-  assert.object(filter, &#x27;filter&#x27;);
+  assert.object(filter, 'filter');
 
   this.filters.push(filter);
 }</pre></li>
@@ -5021,9 +5014,9 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">matches = function (target, strictAttrCase) {
-  assert.object(target, &#x27;target&#x27;);
+  assert.object(target, 'target');
 
-  for (var i = 0; i &#x3c; this.filters.length; i++) {
+  for (var i = 0; i &lt; this.filters.length; i++) {
     if (this.filters[i].matches(target, strictAttrCase))
       return true;
   }
@@ -5043,11 +5036,11 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">toString = function () {
-  var str = &#x27;(|&#x27;;
+  var str = '(|';
   this.filters.forEach(function (f) {
     str += f.toString();
   });
-  str += &#x27;)&#x27;;
+  str += ')';
 
   return str;
 }</pre></li>
@@ -5084,17 +5077,17 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function PresenceFilter(options) {
-  if (typeof (options) === &#x27;object&#x27;) {
-    assert.string(options.attribute, &#x27;options.attribute&#x27;);
+  if (typeof (options) === 'object') {
+    assert.string(options.attribute, 'options.attribute');
     this.attribute = options.attribute;
   }
 
 
   var self = this;
-  this.__defineGetter__(&#x27;type&#x27;, function () { return &#x27;present&#x27;; });
-  this.__defineGetter__(&#x27;json&#x27;, function () {
+  this.__defineGetter__('type', function () { return 'present'; });
+  this.__defineGetter__('json', function () {
     return {
-      type: &#x27;PresenceMatch&#x27;,
+      type: 'PresenceMatch',
       attribute: self.attribute
     };
   });
@@ -5119,7 +5112,7 @@
     <li>description and source-code<pre class="apidocCodePre">_toBer = function (ber) {
   assert.ok(ber);
 
-  for (var i = 0; i &#x3c; this.attribute.length; i++)
+  for (var i = 0; i &lt; this.attribute.length; i++)
     ber.writeByte(this.attribute.charCodeAt(i));
 
   return ber;
@@ -5140,7 +5133,7 @@
   assert.ok(ber);
 
   this.attribute =
-    ber.buffer.slice(0, ber.length).toString(&#x27;utf8&#x27;).toLowerCase();
+    ber.buffer.slice(0, ber.length).toString('utf8').toLowerCase();
 
   ber._offset += ber.length;
 
@@ -5160,7 +5153,7 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function toBer(ber) {
   if (!ber || !(ber instanceof BerWriter))
-    throw new TypeError(&#x27;ber (BerWriter) required&#x27;);
+    throw new TypeError('ber (BerWriter) required');
 
   ber.startSequence(TYPES[this.type]);
   ber = this._toBer(ber);
@@ -5187,7 +5180,7 @@
     <li>description and source-code<pre class="apidocCodePre">_toBer = function (ber) {
   assert.ok(ber);
 
-  for (var i = 0; i &#x3c; this.attribute.length; i++)
+  for (var i = 0; i &lt; this.attribute.length; i++)
     ber.writeByte(this.attribute.charCodeAt(i));
 
   return ber;
@@ -5213,7 +5206,7 @@
   assert.ok(ber);
 
   this.attribute =
-    ber.buffer.slice(0, ber.length).toString(&#x27;utf8&#x27;).toLowerCase();
+    ber.buffer.slice(0, ber.length).toString('utf8').toLowerCase();
 
   ber._offset += ber.length;
 
@@ -5238,7 +5231,7 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function toBer(ber) {
   if (!ber || !(ber instanceof BerWriter))
-    throw new TypeError(&#x27;ber (BerWriter) required&#x27;);
+    throw new TypeError('ber (BerWriter) required');
 
   ber.startSequence(TYPES[this.type]);
   ber = this._toBer(ber);
@@ -5263,11 +5256,11 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">matches = function (target, strictAttrCase) {
-  assert.object(target, &#x27;target&#x27;);
+  assert.object(target, 'target');
 
   var value = helpers.getAttrValue(target, this.attribute, strictAttrCase);
 
-  return (value !== undefined &#x26;&#x26; value !== null);
+  return (value !== undefined &amp;&amp; value !== null);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -5282,7 +5275,7 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">toString = function () {
-  return &#x27;(&#x27; + helpers.escape(this.attribute) + &#x27;=*)&#x27;;
+  return '(' + helpers.escape(this.attribute) + '=*)';
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -5317,8 +5310,8 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function SubstringFilter(options) {
-  if (typeof (options) === &#x27;object&#x27;) {
-    assert.string(options.attribute, &#x27;options.attribute&#x27;);
+  if (typeof (options) === 'object') {
+    assert.string(options.attribute, 'options.attribute');
 
     this.attribute = options.attribute;
     this.initial = options.initial;
@@ -5329,10 +5322,10 @@
   }
 
   var self = this;
-  this.__defineGetter__(&#x27;type&#x27;, function () { return &#x27;substring&#x27;; });
-  this.__defineGetter__(&#x27;json&#x27;, function () {
+  this.__defineGetter__('type', function () { return 'substring'; });
+  this.__defineGetter__('json', function () {
     return {
-      type: &#x27;SubstringMatch&#x27;,
+      type: 'SubstringMatch',
       initial: self.initial,
       any: self.any,
       final: self.final
@@ -5365,7 +5358,7 @@
   if (this.initial)
     ber.writeString(this.initial, 0x80);
 
-  if (this.any &#x26;&#x26; this.any.length)
+  if (this.any &amp;&amp; this.any.length)
     this.any.forEach(function (s) {
       ber.writeString(s, 0x81);
     });
@@ -5396,27 +5389,27 @@
   ber.readSequence();
   var end = ber.offset + ber.length;
 
-  while (ber.offset &#x3c; end) {
+  while (ber.offset &lt; end) {
     var tag = ber.peek();
     switch (tag) {
     case 0x80: // Initial
       this.initial = ber.readString(tag);
-      if (this.attribute === &#x27;objectclass&#x27;)
+      if (this.attribute === 'objectclass')
         this.initial = this.initial.toLowerCase();
       break;
     case 0x81: // Any
       var anyVal = ber.readString(tag);
-      if (this.attribute === &#x27;objectclass&#x27;)
+      if (this.attribute === 'objectclass')
         anyVal = anyVal.toLowerCase();
       this.any.push(anyVal);
       break;
     case 0x82: // Final
       this.final = ber.readString(tag);
-      if (this.attribute === &#x27;objectclass&#x27;)
+      if (this.attribute === 'objectclass')
         this.final = this.final.toLowerCase();
       break;
     default:
-      throw new Error(&#x27;Invalid substrings filter type: 0x&#x27; + tag.toString(16));
+      throw new Error('Invalid substrings filter type: 0x' + tag.toString(16));
     }
   }
 
@@ -5436,7 +5429,7 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function toBer(ber) {
   if (!ber || !(ber instanceof BerWriter))
-    throw new TypeError(&#x27;ber (BerWriter) required&#x27;);
+    throw new TypeError('ber (BerWriter) required');
 
   ber.startSequence(TYPES[this.type]);
   ber = this._toBer(ber);
@@ -5469,7 +5462,7 @@
   if (this.initial)
     ber.writeString(this.initial, 0x80);
 
-  if (this.any &#x26;&#x26; this.any.length)
+  if (this.any &amp;&amp; this.any.length)
     this.any.forEach(function (s) {
       ber.writeString(s, 0x81);
     });
@@ -5505,27 +5498,27 @@
   ber.readSequence();
   var end = ber.offset + ber.length;
 
-  while (ber.offset &#x3c; end) {
+  while (ber.offset &lt; end) {
     var tag = ber.peek();
     switch (tag) {
     case 0x80: // Initial
       this.initial = ber.readString(tag);
-      if (this.attribute === &#x27;objectclass&#x27;)
+      if (this.attribute === 'objectclass')
         this.initial = this.initial.toLowerCase();
       break;
     case 0x81: // Any
       var anyVal = ber.readString(tag);
-      if (this.attribute === &#x27;objectclass&#x27;)
+      if (this.attribute === 'objectclass')
         anyVal = anyVal.toLowerCase();
       this.any.push(anyVal);
       break;
     case 0x82: // Final
       this.final = ber.readString(tag);
-      if (this.attribute === &#x27;objectclass&#x27;)
+      if (this.attribute === 'objectclass')
         this.final = this.final.toLowerCase();
       break;
     default:
-      throw new Error(&#x27;Invalid substrings filter type: 0x&#x27; + tag.toString(16));
+      throw new Error('Invalid substrings filter type: 0x' + tag.toString(16));
     }
   }
 
@@ -5550,7 +5543,7 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function toBer(ber) {
   if (!ber || !(ber instanceof BerWriter))
-    throw new TypeError(&#x27;ber (BerWriter) required&#x27;);
+    throw new TypeError('ber (BerWriter) required');
 
   ber.startSequence(TYPES[this.type]);
   ber = this._toBer(ber);
@@ -5575,20 +5568,20 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">matches = function (target, strictAttrCase) {
-  assert.object(target, &#x27;target&#x27;);
+  assert.object(target, 'target');
 
   var tv = helpers.getAttrValue(target, this.attribute, strictAttrCase);
 
-  if (tv !== undefined &#x26;&#x26; tv !== null) {
-    var re = &#x27;&#x27;;
+  if (tv !== undefined &amp;&amp; tv !== null) {
+    var re = '';
 
     if (this.initial)
-      re += &#x27;^&#x27; + escapeRegExp(this.initial) + &#x27;.*&#x27;;
+      re += '^' + escapeRegExp(this.initial) + '.*';
     this.any.forEach(function (s) {
-      re += escapeRegExp(s) + &#x27;.*&#x27;;
+      re += escapeRegExp(s) + '.*';
     });
     if (this.final)
-      re += escapeRegExp(this.final) + &#x27;$&#x27;;
+      re += escapeRegExp(this.final) + '$';
 
     var matcher = new RegExp(re);
     return helpers.testValues(function (v) {
@@ -5611,21 +5604,21 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">toString = function () {
-  var str = &#x27;(&#x27; + helpers.escape(this.attribute) + &#x27;=&#x27;;
+  var str = '(' + helpers.escape(this.attribute) + '=';
 
   if (this.initial)
     str += helpers.escape(this.initial);
 
-  str += &#x27;*&#x27;;
+  str += '*';
 
   this.any.forEach(function (s) {
-    str += helpers.escape(s) + &#x27;*&#x27;;
+    str += helpers.escape(s) + '*';
   });
 
   if (this.final)
     str += helpers.escape(this.final);
 
-  str += &#x27;)&#x27;;
+  str += ')';
 
   return str;
 }</pre></li>
@@ -5647,12 +5640,12 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function isFilter(filter) {
-  if (!filter || typeof (filter) !== &#x27;object&#x27;) {
+  if (!filter || typeof (filter) !== 'object') {
     return false;
   }
   // Do our best to duck-type it
-  if (typeof (filter.toBer) === &#x27;function&#x27; &#x26;&#x26;
-      typeof (filter.matches) === &#x27;function&#x27; &#x26;&#x26;
+  if (typeof (filter.toBer) === 'function' &amp;&amp;
+      typeof (filter.matches) === 'function' &amp;&amp;
       TYPES[filter.type] !== undefined) {
     return true;
   }
@@ -5677,7 +5670,7 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">parse = function (ber) {
   if (!ber || !(ber instanceof BerReader))
-    throw new TypeError(&#x27;ber (BerReader) required&#x27;);
+    throw new TypeError('ber (BerReader) required');
 
   return _parse(ber);
 }</pre></li>
@@ -5734,3 +5727,4 @@
     ]
 </div>
 </div>
+</body></html>

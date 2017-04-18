@@ -1,43 +1,46 @@
-<svg height="638" width="720" xmlns="http://www.w3.org/2000/svg">
-<rect height="638" fill="#555" width="720"></rect>
+<svg height="686" width="720" xmlns="http://www.w3.org/2000/svg">
+<rect height="686" fill="#555" width="720"></rect>
 <text fill="#7f7" font-family="Courier New" font-size="12" xml:space="preserve">
-<tspan x="10" y="26">└─┬ activedirectory@0.7.2 </tspan>
-<tspan x="10" y="42">  ├─┬ async@2.3.0 </tspan>
-<tspan x="10" y="58">  │ └── lodash@4.17.4 </tspan>
-<tspan x="10" y="74">  ├─┬ bunyan@1.8.10 </tspan>
-<tspan x="10" y="90">  │ ├─┬ dtrace-provider@0.8.1 </tspan>
-<tspan x="10" y="106">  │ │ └── nan@2.6.0 </tspan>
-<tspan x="10" y="122">  │ ├── moment@2.18.1 </tspan>
-<tspan x="10" y="138">  │ ├─┬ mv@2.1.1 </tspan>
-<tspan x="10" y="154">  │ │ ├─┬ mkdirp@0.5.1 </tspan>
-<tspan x="10" y="170">  │ │ │ └── minimist@0.0.8 </tspan>
-<tspan x="10" y="186">  │ │ ├── ncp@2.0.0 </tspan>
-<tspan x="10" y="202">  │ │ └─┬ rimraf@2.4.5 </tspan>
-<tspan x="10" y="218">  │ │   └─┬ glob@6.0.4 </tspan>
-<tspan x="10" y="234">  │ │     ├── inflight@1.0.6 </tspan>
-<tspan x="10" y="250">  │ │     ├── inherits@2.0.3 </tspan>
-<tspan x="10" y="266">  │ │     ├─┬ minimatch@3.0.3 </tspan>
-<tspan x="10" y="282">  │ │     │ └─┬ brace-expansion@1.1.6 </tspan>
-<tspan x="10" y="298">  │ │     │   ├── balanced-match@0.4.2 </tspan>
-<tspan x="10" y="314">  │ │     │   └── concat-map@0.0.1 </tspan>
-<tspan x="10" y="330">  │ │     └── path-is-absolute@1.0.1 </tspan>
-<tspan x="10" y="346">  │ └── safe-json-stringify@1.0.4 </tspan>
-<tspan x="10" y="362">  ├─┬ ldapjs@1.0.1 </tspan>
-<tspan x="10" y="378">  │ ├── asn1@0.2.3 </tspan>
-<tspan x="10" y="394">  │ ├── assert-plus@1.0.0 </tspan>
-<tspan x="10" y="410">  │ ├─┬ backoff@2.5.0 </tspan>
-<tspan x="10" y="426">  │ │ └── precond@0.2.3 </tspan>
-<tspan x="10" y="442">  │ ├── dashdash@1.14.1 </tspan>
-<tspan x="10" y="458">  │ ├── dtrace-provider@0.7.1 </tspan>
-<tspan x="10" y="474">  │ ├─┬ ldap-filter@0.2.2 </tspan>
-<tspan x="10" y="490">  │ │ └── assert-plus@0.1.5 </tspan>
-<tspan x="10" y="506">  │ ├─┬ once@1.4.0 </tspan>
-<tspan x="10" y="522">  │ │ └── wrappy@1.0.2 </tspan>
-<tspan x="10" y="538">  │ ├─┬ vasync@1.6.4 </tspan>
-<tspan x="10" y="554">  │ │ └── verror@1.6.0 </tspan>
-<tspan x="10" y="570">  │ └─┬ verror@1.9.0 </tspan>
-<tspan x="10" y="586">  │   ├── core-util-is@1.0.2 </tspan>
-<tspan x="10" y="602">  │   └── extsprintf@1.2.0 </tspan>
-<tspan x="10" y="618">  └── underscore@1.8.3</tspan>
+<tspan x="10" y="26">13 megabytes installed</tspan>
+<tspan x="10" y="42"></tspan>
+<tspan x="10" y="58">node_modules</tspan>
+<tspan x="10" y="74">└─┬ activedirectory@0.7.2 </tspan>
+<tspan x="10" y="90">  ├─┬ async@2.3.0 </tspan>
+<tspan x="10" y="106">  │ └── lodash@4.17.4 </tspan>
+<tspan x="10" y="122">  ├─┬ bunyan@1.8.10 </tspan>
+<tspan x="10" y="138">  │ ├─┬ dtrace-provider@0.8.1 </tspan>
+<tspan x="10" y="154">  │ │ └── nan@2.6.2 </tspan>
+<tspan x="10" y="170">  │ ├── moment@2.18.1 </tspan>
+<tspan x="10" y="186">  │ ├─┬ mv@2.1.1 </tspan>
+<tspan x="10" y="202">  │ │ ├─┬ mkdirp@0.5.1 </tspan>
+<tspan x="10" y="218">  │ │ │ └── minimist@0.0.8 </tspan>
+<tspan x="10" y="234">  │ │ ├── ncp@2.0.0 </tspan>
+<tspan x="10" y="250">  │ │ └─┬ rimraf@2.4.5 </tspan>
+<tspan x="10" y="266">  │ │   └─┬ glob@6.0.4 </tspan>
+<tspan x="10" y="282">  │ │     ├── inflight@1.0.6 </tspan>
+<tspan x="10" y="298">  │ │     ├── inherits@2.0.3 </tspan>
+<tspan x="10" y="314">  │ │     ├─┬ minimatch@3.0.3 </tspan>
+<tspan x="10" y="330">  │ │     │ └─┬ brace-expansion@1.1.7 </tspan>
+<tspan x="10" y="346">  │ │     │   ├── balanced-match@0.4.2 </tspan>
+<tspan x="10" y="362">  │ │     │   └── concat-map@0.0.1 </tspan>
+<tspan x="10" y="378">  │ │     └── path-is-absolute@1.0.1 </tspan>
+<tspan x="10" y="394">  │ └── safe-json-stringify@1.0.4 </tspan>
+<tspan x="10" y="410">  ├─┬ ldapjs@1.0.1 </tspan>
+<tspan x="10" y="426">  │ ├── asn1@0.2.3 </tspan>
+<tspan x="10" y="442">  │ ├── assert-plus@1.0.0 </tspan>
+<tspan x="10" y="458">  │ ├─┬ backoff@2.5.0 </tspan>
+<tspan x="10" y="474">  │ │ └── precond@0.2.3 </tspan>
+<tspan x="10" y="490">  │ ├── dashdash@1.14.1 </tspan>
+<tspan x="10" y="506">  │ ├── dtrace-provider@0.7.1 </tspan>
+<tspan x="10" y="522">  │ ├─┬ ldap-filter@0.2.2 </tspan>
+<tspan x="10" y="538">  │ │ └── assert-plus@0.1.5 </tspan>
+<tspan x="10" y="554">  │ ├─┬ once@1.4.0 </tspan>
+<tspan x="10" y="570">  │ │ └── wrappy@1.0.2 </tspan>
+<tspan x="10" y="586">  │ ├─┬ vasync@1.6.4 </tspan>
+<tspan x="10" y="602">  │ │ └── verror@1.6.0 </tspan>
+<tspan x="10" y="618">  │ └─┬ verror@1.9.0 </tspan>
+<tspan x="10" y="634">  │   ├── core-util-is@1.0.2 </tspan>
+<tspan x="10" y="650">  │   └── extsprintf@1.2.0 </tspan>
+<tspan x="10" y="666">  └── underscore@1.8.3</tspan>
 </text>
 </svg>
