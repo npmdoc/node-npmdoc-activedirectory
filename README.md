@@ -1,6 +1,6 @@
 # npmdoc-activedirectory
 
-#### api documentation for  [activedirectory (v0.7.2)](https://github.com/gheeres/node-activedirectory#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-activedirectory.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-activedirectory) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-activedirectory.svg)](https://travis-ci.org/npmdoc/node-npmdoc-activedirectory)
+#### basic api documentation for  [activedirectory (v0.7.2)](https://github.com/gheeres/node-activedirectory#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-activedirectory.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-activedirectory) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-activedirectory.svg)](https://travis-ci.org/npmdoc/node-npmdoc-activedirectory)
 
 #### ActiveDirectory is an ldapjs client for authN (authentication) and authZ (authorization) for Microsoft Active Directory with range retrieval support for large Active Directory installations.
 
@@ -67,7 +67,8 @@
         "url": "git+https://github.com/gheeres/node-activedirectory.git"
     },
     "scripts": {},
-    "version": "0.7.2"
+    "version": "0.7.2",
+    "bin": {}
 }
 ```
 
